@@ -29,17 +29,33 @@ defined('ABSPATH') || exit;
             <div class="row">
                 <div class="col-12">
                     <div class="menu-top-area">
-                        <div class="menu-top-area-phone"></div>
-                        <div class="menu-top-area-email"></div>
-                        <div class="menu-top-area-social-fb"></div>
-                        <div class="menu-top-area-social-ig"></div>
+                        <div class="menu-top-area-phone"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-phone-icon">17 728 12 14</p></a></div>
+                        <div class="menu-top-area-email"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-mail-icon">kontakt@bistrodziendobry.pl</p></a></div>
+                        <div class="menu-top-area-social-fb"><a href="#" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/facebook-icon.png"></a></div>
+                        <div class="menu-top-area-social-ig"><a href="#" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon.png"></a></div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <div class="menu-main">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
+                <div class="main-menu">
+                    <div class="col-4">
+                        <div class="menu-main-logo">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
+                        </div>
+                    </div>
+                    <div style="height: 100%;" class="col-8">
+                        <div class="menu-main-menu-list">
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location'  => 'Main-Menu-Home',
+                                    'menu_class'      => 'menu-list-desktop',
+                                    'menu_id'         => 'Main-menu',
+                                    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+                                )
+                            );
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,7 +68,7 @@ defined('ABSPATH') || exit;
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location'  => 'Main-Menu-Home',
+						'theme_location'  => 'Main-Menu',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav header__nav m-0 p-lg-0 align-items-lg-center',

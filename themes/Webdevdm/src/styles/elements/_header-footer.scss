@@ -1,10 +1,86 @@
-
+@import "src/styles/generic/_font-faces";
 :root {
   --padding-y: 55px;
   --padding-x: 28px;
   @include media-breakpoint-up(xl) {
 	--padding-y: 75px;
 	--padding-x: 48px;
+  }
+}
+.menu-top-area{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-right: 10%;
+}
+.menu-top-area-contact-txt{
+  font-weight: 400;
+  font-size: $font14;
+  line-height: 16.8px;
+  color: $fontGreenMenuBackground;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.contact-phone-icon::before{
+  content: '';
+  background:  url(../assets/img/phone-icon.png) no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.contact-mail-icon::before{
+  content: '';
+  background:  url(../assets/img/mail-icon.png) no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.menu-top-area-social-icon{
+  width: 16px;
+  height: 16px;
+}
+.main-menu{
+  background-color: #173800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-main-menu-list{
+  height: 100%;
+}
+.menu-main-menu-container{
+  height: 100%;
+}
+.menu-list-desktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  margin-right: 15%;
+  li{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: $font16;
+    line-height: 24px;
+    color: #FFF4E8;
+    list-style: none;
+    padding: 15px 35px;
+    height: inherit;
+    align-content: center;
+  }
+  .menu-subscription{
+    background-color: #1782FF;
+  }
+  .menu-order-online{
+    background-color:#FF7F1A;
   }
 }
 .header__desktop {
@@ -30,11 +106,6 @@
 }
 .nav-link {
   display: initial !important;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: #23242C;
 }
 .navbar-expand-xl .navbar-nav{
   gap:20px;
@@ -95,82 +166,55 @@
 }
 // footer
 .footer{
-  background-color: #23242C;
+  background-color: $fontGreenFooterBackground;
   padding-top: 140px;
   padding-bottom: 129px;
-  .footer__desc{
-    margin-top: 32px;
-    color: white;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    line-height: 32px;
-    word-wrap: break-word;
-    margin-left: -16px;
+  .footer-logo{
+    height:5.408vw;
+    width: 9.981vw;
   }
-  .footer__nav__title{
-    color: #FAF7F3;
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 32px;
-    word-wrap: break-word;
-    margin-left: 38px;
+  .footer-business-info-details-txt{
+    color:$fontLight;
+    font-size: $font12;
+    line-height: 22px;
+    font-weight: 300;
   }
-  img.footer__logo__img{
-    margin-left: -18px;
+  .footer-business-info-txt-title{
+    font-weight: 500;
+    font-size: $font14;
+    line-height: 21px;
+    color:$fontLight;
   }
-  .footer__logo__img{
-    img{
-      margin-left: -18px;
+  .footer-contact-details{
+    a{
+      display: flex;
+      align-items: center;
+      font-size: $font16;
+      line-height: 22px;
+      color: $footerContactTxtGreen;
     }
   }
-  ul.footer-menu {
-    row-gap: 13px;
-    li a {
-      color: white;
-      font-size: 16px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      line-height: 32px;
-      word-wrap: break-word;
-      text-decoration: none;
+  .footer-phone{
+    a::before{
+      content: '';
+      background:  url(../assets/img/phone-footer-icon.png) no-repeat 0 0;
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
     }
   }
-  .footer__copy{
-    color: white;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 32px;
-    word-wrap: break-word;
-    opacity: 0.50;
-    margin-left: -10px;
-    margin-top: -8px;
-  }
-  .copy__mobile{
-    display: none;
-  }
-  ul#footer-the-legals {
-    gap: 13px;
-  }
-  ul#Footer-Shop-here {
-    gap:10px;
-  }
-  .menu-footer-the-legals-container{
-    margin-left: 6px;
-    margin-top: -6px;
-  }
-  .menu-footer-shop-here-container {
-    margin-left: -51px;
-    margin-top: -8px;
-  }
-  .shop__here_title {
-    margin-left: -17px;
-    margin-top: -4px;
-  }
-  .the__legals_title {
-    margin-left: 38px;
+  .footer-email{
+    a::before{
+      content: '';
+      background:  url(../assets/img/mail-footer-icon.png) no-repeat 0 0;
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+    }
   }
 }
 

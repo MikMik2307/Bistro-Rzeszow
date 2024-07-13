@@ -16,54 +16,77 @@ $container = get_theme_mod('understrap_container_type');
 <footer class="footer">
 		<div class="container-xl">
 			<div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="footer__logo">
-                        <img class="footer__logo__img" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/MAD-HATTERS-FOOTER.svg">
-                        <p class="footer__desc">Be better, be cooler, be a Mad <br> Hatter and sustainably matter.</p>
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/Decoration.svg">
-                        <p class="footer__copy copy__mobile">Copyright 2012 Mad Hatters, Inc. Terms & Privacy</p>
+                <div class="col-3">
+                    <div class="footer-logo">
+                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
                     </div>
                 </div>
-                <div class="col-12 col-lg-2"></div>
-				<div class="col-12 col-lg-2">
-                    <p class="footer__nav__title shop__here_title" style="position:relative;">Shop here</p>
-					<nav class="footer__nav">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'Footer-Shop-here',
-								'menu_class'     => 'footer-menu d-flex flex-column flex-lg-col',
-								'fallback_cb'    => '',
-								'menu_id'        => 'Footer-Shop-here',
-								'depth'          => 2,
-							)
-						);
-						?>
-					</nav>
-				</div>
-                <div class="col-12 col-lg-2">
-                    <nav class="footer__nav">
-                        <p class="footer__nav__title the__legals_title">The legals</p>
-                        <?php
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'Footer-The-legals',
-                                'menu_class'     => 'footer-menu d-flex flex-column flex-lg-col',
-                                'fallback_cb'    => '',
-                                'menu_id'        => 'footer-the-legals',
-                                'depth'          => 2,
-                            )
-                        );
-                        ?>
-                    </nav>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-business-info-txt">
+                                <p class="footer-business-info-txt-title"> Adres firmy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-business-info-details">
+                                <p class="footer-business-info-details-txt">Bistro Dzień Dobry</p>
+                                <p class="footer-business-info-details-txt">ul.Kwiatowa 2,</p>
+                                <p class="footer-business-info-details-txt">35-206 Rzeszów</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-business-info-details">
+                                <p class="footer-business-info-details-txt">REGON: 941233967</p>
+                                <p class="footer-business-info-details-txt">NIP: 247 035 9230</p>
+                                <p class="footer-business-info-details-txt">KRS: 0000927321</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-			</div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="footer__copy copy__desktop">Copyright 2012 Mad Hatters, Inc. Terms & Privacy</p>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-contact-details footer-email"><a href="#" target="_blank">kontakt@bistrodziendobry.pl</a></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="footer-contact-details footer-phone"><a href="#" target="_blank">+48 23 683 44 24</a></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-social-icons">
+                                <a href="#" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/Facebook-icon-footer.png"></a>
+                                <a href="#" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon-footer.png"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-		</div>
+            <div class="row">
+                <div class="footer-bottom-area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-bottom-menu">
+                                <?php
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'Footer-Menu',
+                                        'menu_class'     => 'footer-menu d-flex flex-column flex-lg-col',
+                                        'fallback_cb'    => '',
+                                        'menu_id'        => 'Footer-Menu',
+                                        'depth'          => 2,
+                                    )
+                                );
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </footer>
 <?php wp_footer(); ?>
 

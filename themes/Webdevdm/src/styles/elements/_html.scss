@@ -11,7 +11,7 @@
  *    scrollbars naturally.
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
-$fontFamily: 'Montserrat', sans-serif;
+$fontFamily: 'Poppins', sans-serif;
 
 html {
 	// background: $color-bg;
@@ -37,6 +37,9 @@ html {
 	// @include media-breakpoint-up(xxl) {
 	// 	font-size: 1em; /* 16px */
 	// }
+}
+body{
+	font-family: $fontFamily;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
