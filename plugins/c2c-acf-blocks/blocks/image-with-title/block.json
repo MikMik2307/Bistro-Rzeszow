@@ -1,0 +1,12 @@
+{
+  "name": "cab/image-with-title",
+  "title": "Image with title",
+  "description": "Two column with image and text (Left and right)",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Image with title"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

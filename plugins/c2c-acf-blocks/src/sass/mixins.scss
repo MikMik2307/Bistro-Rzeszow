@@ -1,0 +1,32 @@
+@import "variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+
+@mixin text(
+	$fontFamily,
+	$fontWeight,
+	$fontSize,
+	$color,
+	$fontSizeMobile: null
+) {
+	font-family: $fontFamily;
+	font-weight: $fontWeight;
+	font-size: $fontSize;
+	color: $color;
+
+	@if $fontSizeMobile {
+	  @include media-breakpoint-down(xl) {
+		  font-size: $fontSizeMobile;
+	  }
+	  @include media-breakpoint-down(lg) {
+		  font-size: $fontSizeMobile*0.9;
+	  }
+	  @include media-breakpoint-down(md) {
+			font-size: $fontSizeMobile*0.8;
+	  }
+	  @include media-breakpoint-down(sm) {
+		    font-size: $fontSizeMobile*0.7;
+	  }
+	}
+}
+

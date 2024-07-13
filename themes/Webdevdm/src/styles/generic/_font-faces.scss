@@ -1,0 +1,25 @@
+@mixin fontfaces($arr, $font, $style) {
+	@each $n, $w in $arr {
+		@font-face {
+			font-family: $font;
+			font-style: $style;
+			font-weight: $w;
+			font-display: swap;
+			src: url('../assets/fonts/#{$n}.ttf') format('truetype');
+		}
+	}
+}
+
+$Poppins: (
+	'Poppins-Light': 300,
+	'Poppins-Regular': 400,
+	'Poppins-Medium': 500,
+	'Poppins-SemiBold': 600,
+	'Poppins-Bold': 700,
+	'Poppins-ExtraBold': 800,
+);
+
+
+
+@include fontfaces($Poppins, $font-name, normal);
+

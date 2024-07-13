@@ -1,0 +1,12 @@
+{
+  "name": "cab/two-column-with-speaker-and-text",
+  "title": "Two column with speaker and text",
+  "description": "Two column with speaker and text",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["example"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

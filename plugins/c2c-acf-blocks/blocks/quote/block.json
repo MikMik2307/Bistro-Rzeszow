@@ -1,0 +1,12 @@
+{
+  "name": "cab/quote",
+  "title": "Quote",
+  "description": "Quote block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Hero"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

@@ -1,0 +1,194 @@
+@import 'src/sass/variables';
+
+    .wp-block-cab-hero {
+        background: url("img/HeroBackground.png") no-repeat;
+        background-position-x: 66%;
+        background-position-y: 96%;
+        padding: 138px 131px 0px;
+        margin-bottom: 160px;
+        height: 553px;
+
+        .cab-hero-subtitle-txt {
+            font-family: $fontFamilyAdditional;
+            color: #967675;
+            font-size: 16px;
+            font-weight: 300;
+            word-wrap: break-word;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        .cab-hero-title-txt {
+            color: #23242C;
+            font-size: 102px;
+            font-family: $fontFamily;
+            font-weight: 700;
+            line-height: 110px;
+            word-wrap: break-word;
+            padding-bottom: 18px;
+
+            sup{
+                font-family: $fontFamily;
+                font-size: 43.52px;
+            }
+            sub{
+                font-family: $fontFamily;
+                font-size: 43.52px;
+            }
+            span.heroTitleSlash{
+                font-size: 43.52px;
+            }
+            span.heroTitleFraction {
+                padding-right: 3%;
+            }
+        }
+
+        .cab-hero-img-top {
+            position: absolute;
+            margin-top: -52px;
+            margin-left: -89px;
+            z-index: 99 !important;
+        }
+
+        .cab-hero-img-bottom {
+            margin-top: 87px;
+            margin-left: 54px;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .cab-btn {
+            margin-top: 18px;
+        }
+        .titleLetters{
+            color: #23242C;
+            font-size: 43.52px;
+            font-family: $fontFamilyAdditional;
+            font-weight: 700;
+            line-height: 17.41px;
+            word-wrap: break-word;
+        }
+    }
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-hero {
+        padding: 183px 131px 0px;
+        background-position-x: 62%;
+        background-position-y: 92%;
+
+        &::before {
+            right: 22%;
+            top: 40%;
+        }
+        .cab-col-hero-content {
+            padding-left: 0%;
+        }
+        .cab-hero-subtitle-txt {
+            margin-top: 12px;
+            margin-bottom: 0px;
+        }
+        .cab-hero-title-txt {
+            padding-bottom: 1%;
+        }
+        .cab-hero-img-top {
+            margin-top: -52px;
+            margin-left: -89px;
+        }
+
+        .cab-hero-img-bottom {
+            margin-top: 87px;
+            margin-left: 54px;
+        }
+
+        .cab-btn {
+            margin-top: 18px;
+        }
+    }
+}
+@media only screen and (max-width: 900px){
+    .wp-block-cab-hero {
+        background: url("img/Hero-mobile.png") no-repeat;
+        background-position-x: -3%;
+        background-position-y: 28%;
+        height: 100%;
+        margin-bottom: 0px;
+        padding: 24px 30px 0;
+        background-size: 167px;
+        .cab-hero-subtitle-txt {
+            font-size: 14px;
+            margin-bottom: -1%;
+            margin-top:5%;
+        }
+
+        .cab-hero-title-txt {
+            font-size: 48px;
+            line-height: 56px;
+
+            span.heroTitleFraction {
+                padding-right: 10px;
+            }
+            sup{
+                font-family: $fontFamily;
+                font-size: 21.16px;
+            }
+            sub{
+                font-family: $fontFamily;
+                font-size: 21.16px;
+            }
+            span.heroTitleSlash{
+                font-size: 21.16px;
+            }
+        }
+
+        .cab-hero-img-top {
+            margin-left: 12%;
+            margin-top: -3%;
+            position:relative;
+            img{
+                width:173px;
+                height:265px;
+            }
+        }
+        .cab-hero-img-bottom {
+            margin-left: 42%;
+            margin-top: -52%;
+            position:relative;
+            img{
+                width:150px;
+                height:214px;
+            }
+        }
+
+        .cab-btn {
+            margin-top: 0px;
+            text-align: -webkit-center;
+            p{
+                padding: 22px 97px;
+                margin-top: 10%;
+                margin-left: 0px;
+                font-size: 18px;
+            }
+        }
+        .cab-col-hero-content{
+            padding-left: 3%;
+        }
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-hero {
+        background: url("img/HeroBackground.png") no-repeat !important;
+        padding-bottom: 145px;
+        padding-top:80px !important;
+        .cab-hero-img-top {
+            margin-left: -40% !important;
+            margin-top: -3% !important;
+        }
+        .cab-hero-img-bottom {
+            margin-left: 20%!important;
+            margin-top: -50%!important;
+        }
+        .cab-btn {
+            text-align: left !important;
+        }
+    }
+}

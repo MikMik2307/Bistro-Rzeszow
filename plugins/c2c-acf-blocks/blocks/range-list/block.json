@@ -1,0 +1,12 @@
+{
+  "name": "cab/range-list",
+  "title": "Range List",
+  "description": "List block with range objects",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["example"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

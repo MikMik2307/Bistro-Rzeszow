@@ -1,0 +1,197 @@
+
+:root {
+  --padding-y: 55px;
+  --padding-x: 28px;
+  @include media-breakpoint-up(xl) {
+	--padding-y: 75px;
+	--padding-x: 48px;
+  }
+}
+.header__desktop {
+  padding-top:20px;
+  position: sticky;
+  width: 100%;
+  z-index: 99000;
+  top:0;
+  text-align: center;
+  background-color: #ffffff;
+}
+.header__mobile{
+  display:none;
+}
+.header__navbar{
+  padding-top:30px;
+}
+.navbar-expand-xl .navbar-collapse{
+  justify-content: center;
+}
+.menu__logo{
+  margin-top:30px;
+}
+.nav-link {
+  display: initial !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #23242C;
+}
+.navbar-expand-xl .navbar-nav{
+  gap:20px;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+  .header {
+    padding-top:19px;
+  }
+  .header__navbar{
+    padding-top:26px;
+  }
+  .menu__logo{
+    margin-top:24px;
+  }
+  .navbar-expand-xl .navbar-nav{
+    gap:50px;
+  }
+}
+@media (max-width: 1199px) {
+  #wrapper-navbar {
+    overflow: hidden;
+  }
+  #navbarNavDropdown .featured {
+    display: block !important;
+  }
+}
+
+.navbar-toggler-icon.cancel {
+  $iconCancel: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path fill='#000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z'/></svg>");
+  background-image: #{$iconCancel};
+  opacity: 0.5;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 900px){
+  .header__desktop{
+    display: none;
+  }
+  .header__mobile{
+    display:block;
+    padding-left:20px;
+    padding-right: 18px;
+    .header__logo {
+      img {
+        width: 154px;
+        margin-left: 4px;
+        margin-top: -2px;
+      }
+    }
+
+    button.navbar-toggler {
+      border: none;
+    }
+  }
+}
+// footer
+.footer{
+  background-color: #23242C;
+  padding-top: 140px;
+  padding-bottom: 129px;
+  .footer__desc{
+    margin-top: 32px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 32px;
+    word-wrap: break-word;
+    margin-left: -16px;
+  }
+  .footer__nav__title{
+    color: #FAF7F3;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    word-wrap: break-word;
+    margin-left: 38px;
+  }
+  img.footer__logo__img{
+    margin-left: -18px;
+  }
+  .footer__logo__img{
+    img{
+      margin-left: -18px;
+    }
+  }
+  ul.footer-menu {
+    row-gap: 13px;
+    li a {
+      color: white;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      line-height: 32px;
+      word-wrap: break-word;
+      text-decoration: none;
+    }
+  }
+  .footer__copy{
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    word-wrap: break-word;
+    opacity: 0.50;
+    margin-left: -10px;
+    margin-top: -8px;
+  }
+  .copy__mobile{
+    display: none;
+  }
+  ul#footer-the-legals {
+    gap: 13px;
+  }
+  ul#Footer-Shop-here {
+    gap:10px;
+  }
+  .menu-footer-the-legals-container{
+    margin-left: 6px;
+    margin-top: -6px;
+  }
+  .menu-footer-shop-here-container {
+    margin-left: -51px;
+    margin-top: -8px;
+  }
+  .shop__here_title {
+    margin-left: -17px;
+    margin-top: -4px;
+  }
+  .the__legals_title {
+    margin-left: 38px;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px){}
+@media only screen and (max-width: 900px){
+  .footer{
+    padding-left: 30px;
+    padding-bottom: 74px;
+    .copy__mobile{
+      display: block;
+    }
+    .copy__desktop{
+      display: none;
+    }
+    .the__legals_title {
+      margin-left: -17px;
+      margin-top: -4px;
+    }
+    .menu-footer-the-legals-container {
+      margin-left: -51px;
+      margin-top: -8px;
+    }
+  }
+}

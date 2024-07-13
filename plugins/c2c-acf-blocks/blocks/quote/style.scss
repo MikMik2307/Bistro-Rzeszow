@@ -1,0 +1,29 @@
+@import 'src/sass/variables';
+.wp-block-cab-quote{
+    background: url("img/quote.png") no-repeat;
+    padding: 336px 120px 300px;
+    background-position: center;
+
+    .cab-quote-area{
+        text-align: center;
+    }
+    .cab-quote-txt{
+        color: #23242C;
+        font-size: 48px;
+        font-family: $fontFamily;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+}
+@media only screen and (max-width: 900px){
+    .wp-block-cab-quote {
+        background: url("img/quote-mobile.png") no-repeat;
+        background-position: center;
+        padding: 150px 24px 185px;
+        .cab-quote-txt{
+            font-size: 49.25px;
+            line-height: 51.96px;
+        }
+    }
+}
+

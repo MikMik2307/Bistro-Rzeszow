@@ -1,0 +1,89 @@
+//  Bootstrap
+ // Functions first
+ @import 'bootstrap/scss/functions';
+
+ $grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1500px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+
+$spacer: 3.75rem;
+
+ // Required Bootstrap imports
+//  @import '~bootstrap/scss/variables';
+//  @import '~bootstrap/scss/maps';
+//  @import '~bootstrap/scss/mixins';
+//  @import '~bootstrap/scss/root';
+
+//  // Optional components
+//  @import '~bootstrap/scss/utilities';
+//  @import '~bootstrap/scss/reboot';
+//  @import '~bootstrap/scss/containers';
+//  @import '~bootstrap/scss/grid';
+//  @import '~bootstrap/scss/utilities/api';
+//  // @import 'bootstrap/scss/helpers';
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar"; // Requires nav
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/toasts";
+// @import "~bootstrap/scss/modal"; // Requires transitions
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas"; // Requires transitions
+// @import "~bootstrap/scss/placeholders";
+
+// Helpers
+// @import "helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+@import 'settings/global';
+@import 'generic/font-faces';
+@import 'elements/html';
+@import "elements/header-footer";
+@import "elements/cookiebot";
+

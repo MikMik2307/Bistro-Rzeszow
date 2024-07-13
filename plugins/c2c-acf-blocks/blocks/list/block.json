@@ -1,0 +1,12 @@
+{
+  "name": "cab/list",
+  "title": "List",
+  "description": "List block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["List"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}
