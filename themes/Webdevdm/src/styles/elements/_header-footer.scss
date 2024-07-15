@@ -1,4 +1,4 @@
-@import "src/styles/generic/_font-faces";
+@import "src/styles/settings/_global";
 :root {
   --padding-y: 55px;
   --padding-x: 28px;
@@ -185,7 +185,19 @@
     line-height: 21px;
     color:$fontLight;
   }
+  .footer-contact-details-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: max-content;
+  }
+  .footer-contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
   .footer-contact-details{
+    width: max-content;
     a{
       display: flex;
       align-items: center;
@@ -214,6 +226,56 @@
       display: inline-block;
       position: relative;
       margin-right: 10px;
+    }
+  }
+  .footer-social-icons{
+    margin-top: 60px;
+    gap: 30px;
+    display: flex;
+  }
+  .footer-top-area-social-icon{
+    width: 1.429vw;
+    height: 1.429vw;
+  }
+  .footer-bottom-area{
+    margin-top: 100px;
+    border-top: 1px solid #9A9083;
+  }
+  .footer-bottom-row{
+    display: flex;
+    align-items: flex-end;
+  }
+  .menu-footer-menu-container {
+    margin-top: 30px;
+    .footer-menu{
+      padding-left: 0px;
+      gap:20px;
+
+      a{
+        color: $fontLight;
+        font-size: $font14;
+        line-height: 16.7px;
+        font-weight: 400;
+      }
+    }
+    li {
+      list-style: none;
+    }
+  }
+  .footer-bottom-implementation{
+    a{
+      color: $fontLight;
+      font-size: $font14;
+      line-height: 16.7px;
+      font-weight: 400;
+      display: flex;
+      gap: 15px;
+      flex-direction: row;
+      align-items: center;
+    }
+    img{
+      width: 5.321vw;
+      height: 1.045vw;
     }
   }
 }

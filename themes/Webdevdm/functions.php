@@ -171,11 +171,7 @@ function register_menus()
 {
 	register_nav_menus(
 		[
-			'Main-Menu-Home'  => __('Main Menu Home'),
-			'Main-Menu-Other' => __('Main Menu Other'),
-            'Footer-The-legals' => __('Footer The Legals'),
-            'Footer-Shop-here' => __('Footer Shop Here'),
-
+            'Footer-Menu' => __('Footer Menu'),
 		]
 	);
 }

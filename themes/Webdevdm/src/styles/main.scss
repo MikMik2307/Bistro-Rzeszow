@@ -23,6 +23,12 @@ $grid-columns: 12;
 $grid-gutter-width: 32px;
 
 $spacer: 3.75rem;
+.no-margin{
+	margin:0px;
+}
+.no-padding{
+	padding: 0px !important;
+}
 
  // Required Bootstrap imports
 //  @import '~bootstrap/scss/variables';

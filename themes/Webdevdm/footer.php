@@ -46,12 +46,12 @@ $container = get_theme_mod('understrap_container_type');
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 footer-contact-container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 footer-contact-details-container">
                             <div class="footer-contact-details footer-email"><a href="#" target="_blank">kontakt@bistrodziendobry.pl</a></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 footer-contact-details-container">
                             <div class="footer-contact-details footer-phone"><a href="#" target="_blank">+48 23 683 44 24</a></div>
                         </div>
                     </div>
@@ -67,20 +67,27 @@ $container = get_theme_mod('understrap_container_type');
             </div>
             <div class="row">
                 <div class="footer-bottom-area">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-bottom-menu">
-                                <?php
-                                wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'Footer-Menu',
-                                        'menu_class'     => 'footer-menu d-flex flex-column flex-lg-col',
-                                        'fallback_cb'    => '',
-                                        'menu_id'        => 'Footer-Menu',
-                                        'depth'          => 2,
-                                    )
-                                );
-                                ?>
+                    <div class="footer-bottom-area-content">
+                        <div class="row no-margin footer-bottom-row">
+                            <div class="col-10 no-margin no-padding">
+                                <div class="footer-bottom-menu ">
+                                    <?php
+                                    wp_nav_menu(
+                                        array(
+                                            'theme_location' => 'Footer-Menu',
+                                            'menu_class'     => 'footer-menu d-flex flex-row flex-lg-col no-margin no-padding',
+                                            'fallback_cb'    => '',
+                                            'menu_id'        => 'Footer-Menu',
+                                            'depth'          => 2,
+                                        )
+                                    );
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="footer-bottom-implementation">
+                                    <a href="#" target="_blank">Realizacja: <img class="footer-bottom-implementation-img" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/implementation-logo.png"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
