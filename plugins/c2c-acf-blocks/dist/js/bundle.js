@@ -1,6 +1,19 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 74:
+/***/ (() => {
+
+jQuery(document).ready(function ($) {
+  function SetStartingStep() {
+    let startingStep = $(".step-1");
+    startingStep.addClass("step-active");
+  }
+  SetStartingStep();
+});
+
+/***/ }),
+
 /***/ 34:
 /***/ (() => {
 
@@ -112,6 +125,9 @@ var __webpack_exports__ = {};
 /* harmony import */ var _blocks_list_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_list_script__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _blocks_range_list_script__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(124);
 /* harmony import */ var _blocks_range_list_script__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_range_list_script__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(74);
+/* harmony import */ var _blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

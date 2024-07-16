@@ -1,7 +1,26 @@
 //font family
-$fontFamily: 'Playfair Display', serif;
-$fontFamilyAdditional: 'Poppins', sans-serif;
+$fontFamily: 'Poppins', sans-serif;
+$fontFamilyAdditional:'Poppins', sans-serif;
+//Font Sizes VW
+$font14: 0.972vw;
+$font16:1.111vw;
+$font20: 1.389vw;
+$font24: 1.667vw;
 
+//Line Height
+$lineHeight21: 1.458vw;
+$lineHeight24:1.667vw;
+$lineHeight30:2.083vw;
+$lineHeight36:2.5vw;
 //colors
 $mainColor: #967675;
 :root { --bs-body-font-family: #{$fontFamily} }
+
+$stepsActive:#49B500;
+$stepsInActive:#6E6E6E;
+$textLightGreen:#326F09;
+$titleGreen:#173800;
+$borderGray:#EBEBEB;
+$textLight:#FFFDFB;
+$blue:#1782FF;
+

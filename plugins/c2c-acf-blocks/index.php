@@ -5,3 +5,4 @@ require __DIR__ . '/blocks/image-with-title/block.php';
 require __DIR__ . '/blocks/range-list/block.php';
 require __DIR__ . '/blocks/quote/block.php';
 require __DIR__ . '/blocks/newsletter/block.php';
+require __DIR__ . '/blocks/abonament/block.php';
