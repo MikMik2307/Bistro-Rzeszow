@@ -6,3 +6,5 @@ require __DIR__ . '/blocks/range-list/block.php';
 require __DIR__ . '/blocks/quote/block.php';
 require __DIR__ . '/blocks/newsletter/block.php';
 require __DIR__ . '/blocks/abonament/block.php';
+require __DIR__ . '/blocks/homepage-hero/block.php';
+

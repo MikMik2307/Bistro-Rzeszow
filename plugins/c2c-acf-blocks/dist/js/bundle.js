@@ -122,6 +122,13 @@ jQuery(document).ready(function ($) {});
 
 /***/ }),
 
+/***/ 219:
+/***/ (() => {
+
+jQuery(document).ready(function ($) {});
+
+/***/ }),
+
 /***/ 239:
 /***/ (() => {
 
@@ -228,6 +235,9 @@ var __webpack_exports__ = {};
 /* harmony import */ var _blocks_range_list_script__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_range_list_script__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(74);
 /* harmony import */ var _blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(219);
+/* harmony import */ var _blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 

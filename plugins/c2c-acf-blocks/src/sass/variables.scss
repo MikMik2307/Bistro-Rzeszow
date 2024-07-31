@@ -1,11 +1,12 @@
 //font family
 $fontFamily: 'Poppins', sans-serif;
-$fontFamilyAdditional:'Poppins', sans-serif;
+$fontFamilyAdditional:'Abril Display';
 //Font Sizes VW
 $font14: 0.972vw;
 $font16:1.111vw;
 $font20: 1.389vw;
 $font24: 1.667vw;
+$font95: 6.607vw;
 
 //Line Height
 $lineHeight16:1.167vw;
@@ -13,11 +14,13 @@ $lineHeight21: 1.458vw;
 $lineHeight24:1.667vw;
 $lineHeight30:2.083vw;
 $lineHeight36:2.5vw;
+$lineHeight102: 7.069vw;
+
 //colors
 $mainColor: #967675;
 :root { --bs-body-font-family: #{$fontFamily} }
 
-$stepsActive:#49B500;
+$lightGreen:#49B500;
 $stepsInActive:#6E6E6E;
 $textLightGreen:#326F09;
 $titleGreen:#173800;
@@ -25,4 +28,5 @@ $borderGray:#EBEBEB;
 $textLight:#FFFDFB;
 $blue:#1782FF;
 $placeholderColor:#8F8F8F;
+$whiteGray: #FFF4E8;
 

@@ -1,0 +1,41 @@
+@import 'src/sass/variables';
+
+.wp-block-cab-homepage-hero {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding: 100px 0px;
+
+    .homepage-hero-txt-area{
+        .homepage-hero-subtitle{
+            font-size: $font24;
+            line-height: $lineHeight30;
+            font-weight: 500;
+            color: $lightGreen;
+            &::before {
+                content: url("img/steps-dot.svg");
+            }
+        }
+        .homepage-hero-title{
+            font-family: $fontFamilyAdditional;
+            font-size: $font95;
+            line-height: $lineHeight102;
+            color: $whiteGray;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (max-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-abonament {
+    }
+}

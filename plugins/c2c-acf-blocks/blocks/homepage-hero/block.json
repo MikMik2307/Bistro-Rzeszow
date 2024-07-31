@@ -1,0 +1,12 @@
+{
+  "name": "cab/homepage-hero",
+  "title": "Homepage Hero",
+  "description": "Homepage Hero block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Homepage Hero"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

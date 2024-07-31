@@ -17,7 +17,7 @@
       font-weight: 500;
       font-size: $font16;
       line-height: $lineHeight24;
-      color:$stepsInActive;
+      color:$lightGreen;
       padding: 11px 18px 11px 18px;
       border-radius: 4px;
       border: 1px solid $stepsInActive;
@@ -45,13 +45,13 @@
           margin-top: 10px;
         }
         span.step-active{
-          background-color: $stepsActive !important;
+          background-color: $lightGreen !important;
         }
         span:last-child {
           display: none;
         }
         .step-active{
-          color: $stepsActive !important;
+          color: $lightGreen !important;
           &::before {
             filter: none !important;
           }
@@ -105,13 +105,13 @@
       gap: 15px;
 
       .menu-single{
-        border: 1px solid $stepsActive;
+        border: 1px solid $lightGreen;
         border-radius: 4px;
         font-weight: 500;
         font-size: $font16;
         line-height: $lineHeight24;
         padding: 11px 18px;
-        color: $stepsActive;
+        color: $lightGreen;
       }
     }
     .introduction-delivery-container{
