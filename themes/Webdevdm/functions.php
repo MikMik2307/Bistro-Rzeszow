@@ -247,3 +247,14 @@ function load_range_by_ajax_callback() {
 }
 add_action('wp_ajax_load_range_by_ajax', 'load_range_by_ajax_callback');
 add_action('wp_ajax_nopriv_load_range_by_ajax', 'load_range_by_ajax_callback');
+
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+function enqueue_custom_script() {
+    // Enqueue jQuery
+    wp_enqueue_script('jquery');
+}
+
+
+function display_product_variations() {
+
+}

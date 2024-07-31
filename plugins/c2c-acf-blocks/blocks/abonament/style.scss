@@ -2,6 +2,12 @@
 
 .wp-block-cab-abonament {
     font-family: $fontFamily;
+  fieldset:not(:first-of-type) {
+    display: none;
+  }
+  .form-nav-btn-container.first-step-btn{
+    justify-content: flex-end !important;
+  }
   .form-nav-btn-container{
     display: flex;
     flex-direction: row;
@@ -108,6 +114,66 @@
         color: $stepsActive;
       }
     }
+    .introduction-delivery-container{
+      margin-top: 40px;
+
+      .introduction-delivery-title{
+        font-weight: 500;
+        font-size: $font24;
+        line-height: $lineHeight36;
+        color: $titleGreen;
+      }
+      .introduction-delivery-annotation{
+        font-weight: 400;
+        font-size: $font16;
+        line-height: $lineHeight24;
+        color: $textLightGreen;
+      }
+      .introduction-deliver-form{
+        margin-top: 40px;
+
+        .introduction-deliver-form-title{
+          font-weight: 600;
+          font-size: $font20;
+          line-height: $lineHeight30;
+          color: $titleGreen;
+        }
+        .form-input-single{
+          label {
+            font-weight: 400;
+            font-size: $font14;
+            line-height: $lineHeight16;
+            color: $titleGreen;
+            margin-bottom: 10px;
+          }
+            span{
+              color: red;
+            }
+          select{
+            border: 0.5px solid $titleGreen;
+            border-radius: 4px;
+            padding: 19px 16px;
+            font-weight: 400;
+            font-size: $font14;
+            line-height: $lineHeight16;
+            color: $titleGreen;
+          }
+            input{
+              border: 0.5px solid $titleGreen;
+              border-radius: 4px;
+              padding: 19px 16px;
+              font-weight: 400;
+              font-size: $font14;
+              line-height: $lineHeight16;
+              color: $titleGreen;
+
+              ::placeholder{
+                color: $placeholderColor;
+              }
+          }
+        }
+      }
+    }
   }
   .introduction-delivery-container{
     .introduction-deliver-form{
@@ -115,6 +181,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
       }
       .form-input-single {
         display: flex;
@@ -133,36 +201,40 @@
       font-size: $font24;
       line-height: $lineHeight36;
     }
-    .products-list{
-      gap: 4px;
+  }
+  .products-list{
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .selected-product-active{
+      border: 2px solid $titleGreen !important;
+    }
+    .product-single{
+      list-style: none;
+      border: 1px solid $borderGray;
+      border-radius: 8px;
+      padding: 1.111vw;
       display: flex;
-      flex-direction: column;
-      padding: 0;
+      justify-content: space-between;
 
-      .product-single{
-        list-style: none;
-        border: 1px solid $borderGray;
-        border-radius: 8px;
-        padding: 1.111vw;
-
-        &:hover{
-          border: 1px solid $textLightGreen;
-        }
-        .product-list-product-name{
-          color: $titleGreen;
-          font-size: $font20;
-          line-height: $lineHeight30;
-          font-weight: 600;
-        }
-        .product-list-product-description{
+      &:hover{
+        border: 1px solid $textLightGreen;
+      }
+      .product-list-product-name{
+        color: $titleGreen;
+        font-size: $font20;
+        line-height: $lineHeight30;
+        font-weight: 600;
+      }
+      .product-list-product-description{
+        color: $textLightGreen;
+        font-size: $font16;
+        line-height: $lineHeight24;
+        font-weight: 400;
+        a{
           color: $textLightGreen;
-          font-size: $font16;
-          line-height: $lineHeight24;
-          font-weight: 400;
-          a{
-            color: $textLightGreen;
-            text-decoration: underline !important;
-          }
+          text-decoration: underline !important;
         }
       }
     }
