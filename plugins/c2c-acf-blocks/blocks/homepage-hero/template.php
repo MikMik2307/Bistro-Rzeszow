@@ -23,35 +23,41 @@ ini_set('display_startup_errors', 1);
 <section <?php echo $wrapper_attributes; ?> style=" background:url(<?php echo esc_url($backgroundOverlay)?>) <?php echo $backgroundColor?>;">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 col-xl-8">
                 <div class="homepage-hero-txt-area">
                     <p class="homepage-hero-subtitle"><?php echo esc_html($subtitle)?></p>
-                    <h1 class="homepage-hero-title"> <?php echo esc_html($title)?></h1>
+                    <h1 class="homepage-hero-title"> <?php echo wp_kses_post($title)?></h1>
                     <p class="homepage-hero-text"> <?php echo esc_html($text)?></p>
                     <div class="homepage-hero-tiles">
                         <?php
                         if( $tiles ) {
+                            echo '<div class="row">';
+                            $count = count($tiles);
+                            $col_width = 12 / $count;
                             foreach( $tiles as $tile ) {
                                 $tile_title = $tile['tile_title'];
                                 $tile_text= $tile['tile_text'];
                                 $tile_color= $tile['tile_color'];
                                 $tile_link = $tile['tile_link'];
-                                echo '<div class="tile-single" href="'.$tile_link.'">';
+                                echo '<div class="col-'.$col_width.' ">';
+                                echo '<a class="tile-single" href="'.$tile_link.'">';
                                 echo '<div class="tile-single-txt-container">';
                                 echo '<p class="tile-single-title">'.esc_html($tile_title).'</p>';
                                 echo '<p class="tile-single-text">'.esc_html($tile_text).'</p>';
                                 echo '</div>';
-                                echo '<div class="tile-single-bottom-area">';
-                                echo '<span class="tile-single-arrow"></span>';
+                                echo '<div class="tile-single-bottom-area" style="background-color:'.$tile_color.'; height:1.389vw;">';
+                                echo '<span class="tile-single-arrow"><img class="tile-single-arrow-img" src="img/icon-arrow-right.png"></span>';
                                 echo '</div>';
+                                echo '</a>';
                                 echo '</div>';
                             }
+                            echo '</div>';
                         }
                         ?>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-xl-4">
                 <img class="homepage-hero-img" src="<?php echo esc_url($img)?>">
             </div>
         </div>
