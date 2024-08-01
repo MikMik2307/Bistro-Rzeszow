@@ -164,6 +164,13 @@ jQuery(document).ready(function ($) {
   // HideRange();
 });
 
+/***/ }),
+
+/***/ 200:
+/***/ (() => {
+
+jQuery(document).ready(function ($) {});
+
 /***/ })
 
 /******/ 	});
@@ -237,6 +244,9 @@ var __webpack_exports__ = {};
 /* harmony import */ var _blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_abonament_script__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(219);
 /* harmony import */ var _blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_homepage_hero_script__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _blocks_text_section_script__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(200);
+/* harmony import */ var _blocks_text_section_script__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_text_section_script__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
