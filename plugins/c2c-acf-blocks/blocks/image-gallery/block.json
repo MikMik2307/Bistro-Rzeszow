@@ -1,0 +1,12 @@
+{
+  "name": "cab/image-gallery",
+  "title": "Image gallery",
+  "description": "Image gallery block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Image gallery"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

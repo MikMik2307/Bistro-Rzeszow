@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
 //    $steps  = get_field( 'steps' );
 //    $step_count = 0;
 //    $first_step = get_field("step_one_group");

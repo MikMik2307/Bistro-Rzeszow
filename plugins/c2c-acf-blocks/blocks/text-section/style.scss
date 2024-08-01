@@ -1,68 +1,34 @@
 @import 'src/sass/variables';
 
-.wp-block-cab-homepage-hero {
+.wp-block-cab-text-section{
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     padding: 100px 0px;
-
-    .homepage-hero-row{
-        align-items: center;
+    .text-section-row{
+        justify-content: center;
     }
-    .homepage-hero-txt-area{
-        .homepage-hero-subtitle{
-            font-size: $font24;
-            line-height: $lineHeight30;
+    .text-section-area{
+        text-align: center;
+
+        .text-section-subtitle{
             font-weight: 500;
             color: $lightGreen;
-            &::before {
-                content: url("img/steps-dot.svg");
-            }
+            font-size: $font24;
+            line-height: $lineHeight30;
         }
-        .homepage-hero-title{
+        .text-section-title{
             font-family: $fontFamilyAdditional;
             font-size: $font95;
             line-height: $lineHeight102;
-            color: $whiteGray;
+            color: $darkGreen;
             font-weight: 400;
         }
-        .homepage-hero-text{
-            font-size: $font16;
-            line-height: $lineHeight24;
+        .text-section-text{
             font-weight: 500;
-            color: $lightGray;
-            width: 25vw;
-        }
-        .tile-single{
-            .tile-single-txt-container{
-                background-color: white;
-                padding: 30px 40px;
-                border-radius: 4px 4px 0px 0px;
-                p{
-                    margin:0;
-                }
-                .tile-single-title{
-                    font-weight: 500;
-                    font-size: $font14;
-                    line-height: $lineHeight21;
-                    color: $darkGreen;
-                }
-                .tile-single-text{
-                    font-weight: 400;
-                    font-size: $font10;
-                    line-height: $lineHeight15;
-                    color: $brown;
-                }
-            }
-            .tile-single-bottom-area{
-                border-radius: 0px 0px 4px 4px;
-            }
-            .tile-single-arrow-img {
-                margin-left: 12vw;
-                margin-top: -3vh;
-                width: 32px;
-                height: 32px;
-            }
+            color: $lightGreen;
+            font-size: $font20;
+            line-height: $lineHeight32;
         }
     }
 }
