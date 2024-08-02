@@ -1,0 +1,81 @@
+@import 'src/sass/variables';
+
+.wp-block-cab-locations{
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding: 100px 0px;
+
+    .location-title-row{
+        text-align: center;
+    }
+    .locations-title{
+        font-size: $font24;
+        line-height: $lineHeight32;
+        color: $whiteGray;
+        font-weight: 500;
+    }
+    .locations-cards-row{
+        place-content: center;
+    }
+    .col-location-single{
+        width: fit-content;
+    }
+    .location-single-container {
+        background-color: #fff;
+
+        padding: 20px;
+        border-radius: 8px;
+
+        .location-single-name{
+            font-size: $font24;
+            line-height: $lineHeight32;
+            font-weight: 500;
+            color: $darkGreen;
+            margin-top: 10px;
+        }
+        .location-single-adress{
+            font-size: $font16;
+            line-height: $lineHeight24;
+            font-weight: 500;
+            color: $darkGreen;
+
+            &::before {
+                content: url("img/MapPin.png");
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        .location-single-button-container {
+            display: flex;
+
+            .location-single-button{
+                background-color: $blue;
+                color: white;
+                border-radius: 4px;
+                width:100%;
+                text-align: center;
+                font-size: $font16;
+                line-height: $lineHeight24;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (max-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-abonament {
+    }
+}

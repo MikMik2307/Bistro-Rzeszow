@@ -5,3 +5,4 @@ import "./blocks/abonament/script";
 import "./blocks/homepage-hero/script";
 import "./blocks/text-section/script";
 import "./blocks/image-gallery/script";
+import "./blocks/locations/script";
