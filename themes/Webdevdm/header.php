@@ -40,7 +40,7 @@ defined('ABSPATH') || exit;
                 <div class="main-menu">
                     <div class="col-4">
                         <div class="menu-main-logo">
-                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
+                            <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png"></a>
                         </div>
                     </div>
                     <div style="height: 100%;" class="col-8">

@@ -1,0 +1,53 @@
+@import 'src/sass/variables';
+
+.wp-block-cab-menu-block{
+    padding: 50px 0px;
+    .menu-block-title{
+        margin-bottom: 40px;
+
+        .menu-block-title-txt{
+            font-size: $font60;
+            color: $darkGreen;
+            font-weight: 500;
+            font-family: $fontFamilyAdditional;
+        }
+    }
+    .menu-category-single{
+        margin-bottom: 25px;
+        .menu-category-single-category-name{
+            font-size: $font24;
+            color: $yellowOrange;
+            font-weight: 600;
+            margin: 0;
+        }
+        .menu-category-single-category-description{
+            font-size: $font10;
+            font-style: italic;
+            color: $darkGreen;
+        }
+    }
+    .menu-product-single {
+        display: flex;
+        justify-content: space-between;
+        color: $darkGreen;
+        font-size: $font14;
+        .menu-product-single-product-name{
+            max-width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (max-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-abonament {
+    }
+}
