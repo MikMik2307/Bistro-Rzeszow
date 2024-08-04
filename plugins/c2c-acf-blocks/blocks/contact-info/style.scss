@@ -1,0 +1,82 @@
+@import 'src/sass/variables';
+
+.wp-block-cab-contact-info{
+    padding: 50px 0px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+    .contact-info-title {
+        margin-bottom: 40px;
+        .contact-info-title-txt{
+            font-family: $fontFamilyAdditional;
+            color: $whiteGray;
+            font-size: $font60;
+            font-weight: 500;
+        }
+    }
+    .col-contact-info-additional-info{
+        align-content: center;
+    }
+    .contact-info-location-single-container{
+        border-right: 1px solid $lightGreen;
+        .contact-info-location-single-name{
+            color: $lightGreen;
+            font-size: $font16;
+            line-height: $lineHeight24;
+            font-weight: 600;
+        }
+        .contact-info-location-single-adress{
+            font-size: $font14;
+            color: $whiteGray;
+        }
+        .contact-info-location-single-phone{
+            font-size: $font14;
+            color: $whiteGray;
+            font-weight: 400;
+            &::before {
+                content: url("img/PhoneCall.png");
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+        .contact-info-location-single-email{
+            font-size: $font14;
+            color: $whiteGray;
+            font-weight: 400;
+            &::before {
+                content: url("img/Envelope.png");
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+    .contact-info-additional-info{
+        font-size: $font14;
+        color: $whiteGray;
+        font-weight: 400;
+        p{
+            margin:5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (max-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-abonament {
+    }
+}

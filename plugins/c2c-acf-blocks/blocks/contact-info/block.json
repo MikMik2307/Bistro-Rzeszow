@@ -1,0 +1,12 @@
+{
+  "name": "cab/contact-info",
+  "title": "Contact Info",
+  "description": "Contact info block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Contact Info"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}
