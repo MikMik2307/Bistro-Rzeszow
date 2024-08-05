@@ -194,67 +194,10 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 
-//Add Range post type ajax
-function range_scripts() {
-    // Register the script
-    wp_register_script( 'custom-script', get_stylesheet_directory_uri(). 'src/assets/scripts/custom.js', array('jquery'), false, true );
-
-    // Localize the script with new data
-    $script_data_array = array(
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'security' => wp_create_nonce( 'load_more_posts' ),
-    );
-    wp_localize_script( 'custom-script', 'range', $script_data_array );
-
-    // Enqueued script with localized data.
-    wp_enqueue_script( 'custom-script' );
-}
-add_action( 'wp_enqueue_scripts', 'range_scripts' );
-function load_range_by_ajax_callback() {
-    check_ajax_referer('load_more_posts', 'security');
-    $args = array(
-        'post_type' => 'range',
-        'post_status' => 'publish',
-        'posts_per_page' => '4',
-        'paged' => $_POST['page'],
-        'id' => $_POST['id'],
-        'order' =>'ASC',
-    );
-    $range_posts = new WP_Query( $args );
-    ?>
-
-    <?php if ( $range_posts->have_posts() ) : ?>
-        <?php while ( $range_posts->have_posts() ) : $range_posts->the_post();
-            $post_id = $range_posts->post->ID;
-            $range_title          = get_field('title', $post_id);
-            $range_description    = get_field('description', $post_id);
-            $range_img            = get_field('range_featured_image', $post_id);
-        ?>
-            <div class="col-12 col-lg-5 cab-range-item-single" data-id="<?=$counter++?>">
-                <div class="cab-range-item-single-card">
-                    <div class="cab-range-featured-img"><img src="<?php echo esc_url($range_img); ?>"></div>
-                    <div class="cab-range-content-section">
-                        <div class="cab-range-title"><?php echo esc_html($range_title); ?></div>
-                        <div class="cab-range-description"><?php echo esc_html($range_description); ?></div>
-                    </div>
-                </div>
-            </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
-    <?php
-    wp_die();
-}
-add_action('wp_ajax_load_range_by_ajax', 'load_range_by_ajax_callback');
-add_action('wp_ajax_nopriv_load_range_by_ajax', 'load_range_by_ajax_callback');
-
-add_action('wp_enqueue_scripts', 'enqueue_custom_script');
 function enqueue_custom_script() {
     // Enqueue jQuery
     wp_enqueue_script('jquery');
+    wp_enqueue_script('lightbox-script', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), null, true);
+    wp_enqueue_style('lightbox-style', get_template_directory_uri() . '/css/lightbox.css');
 }
-
-
-function display_product_variations() {
-
-}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');

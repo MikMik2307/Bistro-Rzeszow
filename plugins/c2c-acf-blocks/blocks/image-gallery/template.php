@@ -34,7 +34,9 @@ $wrapper_attributes = get_block_wrapper_attributes([
                     echo '</div><div class="row gallery-row">';
                 }
                 echo '<div class="col-12 col-lg-' . $col_width . ' image-gallery-single-img">';
+                echo '<a href=" '.esc_url($image).'" class="gallery-item">';
                 echo '<img src="' . $image . '" style="width: 100%;">';
+                echo '</a>';
                 echo '</div>';
             endforeach;
             echo '</div>';

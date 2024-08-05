@@ -8,3 +8,4 @@ import "./blocks/image-gallery/script";
 import "./blocks/locations/script";
 import "./blocks/menu-block/script";
 import "./blocks/contact-info/script";
+import "./blocks/contact-form/script";

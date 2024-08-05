@@ -1,0 +1,70 @@
+@import 'src/sass/variables';
+
+.wp-block-cab-contact-form{
+    padding: 50px 0px;
+    .contact-form-title-txt{
+        font-size: $font48;
+        font-family: $fontFamilyAdditional;
+        color: $darkGreen;
+        font-weight: 500;
+    }
+    .contact-form-form{
+        .contact-form-form-half-width p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            input{
+                width: 100%;
+            }
+            .contact-form-label-phone{
+                width: 100%;
+            }
+            .contact-form-label-email{
+                width: 100%;
+            }
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            color: $darkGreen;
+            font-size: $font14;
+            line-height: $lineHeight16;
+            gap: 10px;
+        }
+        input{
+            width: 100%;
+            font-size: $font14;
+            background-color: transparent;
+            padding: 5px;
+            border: 1px solid $placeholderColor;
+        }
+        textarea{
+            width:100%;
+            background-color: transparent;
+            border: 1px solid $placeholderColor;
+        }
+        .contact-form-label-name{
+        }
+        .contact-form-form-acceptance .wpcf7-list-item label {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (max-width: 900px) {
+    .wp-block-cab-abonament {
+
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    .wp-block-cab-abonament {
+    }
+}

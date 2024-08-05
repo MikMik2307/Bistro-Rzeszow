@@ -1,0 +1,12 @@
+{
+  "name": "cab/contact-form",
+  "title": "Contact Form",
+  "description": "Contact form block",
+  "category": "formatting",
+  "icon": "text-page",
+  "keywords": ["Contact form"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "template.php"
+  }
+}

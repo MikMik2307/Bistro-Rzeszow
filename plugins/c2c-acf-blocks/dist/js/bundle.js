@@ -115,6 +115,13 @@ jQuery(document).ready(function ($) {
 
 /***/ }),
 
+/***/ 521:
+/***/ (() => {
+
+jQuery(document).ready(function ($) {});
+
+/***/ }),
+
 /***/ 169:
 /***/ (() => {
 
@@ -139,7 +146,34 @@ jQuery(document).ready(function ($) {});
 /***/ 22:
 /***/ (() => {
 
-jQuery(document).ready(function ($) {});
+jQuery(document).ready(function ($) {
+  // Append lightbox container to body
+  $('body').append('<div id="lightbox" style="display:none;"><span class="close">&times;</span><img class="lightbox-content" src=""><div class="caption"></div></div>');
+
+  // When an image in the gallery is clicked
+  $('.gallery-row').on('click', '.gallery-item', function (event) {
+    event.preventDefault();
+    var imgSrc = $(this).attr('href');
+    var caption = $(this).find('img').attr('alt');
+
+    // Show the lightbox
+    $('#lightbox').show();
+    $('#lightbox .lightbox-content').attr('src', imgSrc);
+    $('#lightbox .caption').text(caption);
+  });
+
+  // Close the lightbox when the close button is clicked
+  $('#lightbox').on('click', '.close', function () {
+    $('#lightbox').hide();
+  });
+
+  // Close the lightbox when clicking outside the image
+  $(document).on('click', function (event) {
+    if ($(event.target).is('#lightbox')) {
+      $('#lightbox').hide();
+    }
+  });
+});
 
 /***/ }),
 
@@ -282,6 +316,9 @@ var __webpack_exports__ = {};
 /* harmony import */ var _blocks_menu_block_script__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_menu_block_script__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _blocks_contact_info_script__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(169);
 /* harmony import */ var _blocks_contact_info_script__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_blocks_contact_info_script__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _blocks_contact_form_script__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(521);
+/* harmony import */ var _blocks_contact_form_script__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_contact_form_script__WEBPACK_IMPORTED_MODULE_10__);
+
 
 
 
