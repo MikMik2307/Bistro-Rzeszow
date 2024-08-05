@@ -37,7 +37,9 @@
             color:$darkGreen;
         }
     }
-
+    .container-gallery-normal-width{
+        margin-bottom: 100px;
+    }
     .container-gallery-fullwidth{
         max-width: 100vw !important;
 
@@ -51,6 +53,11 @@
             border-width: 6px 6px 6px 0px;
 
         }
+    }
+    .gallery-area {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 }
 

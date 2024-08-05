@@ -201,3 +201,5 @@ function enqueue_custom_script() {
     wp_enqueue_style('lightbox-style', get_template_directory_uri() . '/css/lightbox.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
+add_filter('wpcf7_autop_or_not', '__return_false');

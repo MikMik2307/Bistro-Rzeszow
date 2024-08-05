@@ -21,26 +21,28 @@ $wrapper_attributes = get_block_wrapper_attributes([
             echo'</div>';
         endif;
         ?>
-        <?php
-        if ($gallery):
-            $count = count($gallery);
-            $col_width = 12 / min($count, 4); // Calculate column width, max 4 columns per row
-            $images_per_row = 4;
+        <div class="gallery-area">
+            <?php
+            if ($gallery):
+                $count = count($gallery);
+                $col_width = 12 / min($count, 4); // Calculate column width, max 4 columns per row
+                $images_per_row = 4;
 
-            echo '<div class="row gallery-row">';
-            foreach ($gallery as $index => $image):
-                // Start a new row for every group of four images
-                if ($index > 0 && $index % $images_per_row == 0) {
-                    echo '</div><div class="row gallery-row">';
-                }
-                echo '<div class="col-12 col-lg-' . $col_width . ' image-gallery-single-img">';
-                echo '<a href=" '.esc_url($image).'" class="gallery-item">';
-                echo '<img src="' . $image . '" style="width: 100%;">';
-                echo '</a>';
+                echo '<div class="row gallery-row">';
+                foreach ($gallery as $index => $image):
+                    // Start a new row for every group of four images
+                    if ($index > 0 && $index % $images_per_row == 0) {
+                        echo '</div><div class="row gallery-row">';
+                    }
+                    echo '<div class="col-12 col-lg-' . $col_width . ' image-gallery-single-img">';
+                    echo '<a href=" '.esc_url($image).'" class="gallery-item">';
+                    echo '<img src="' . $image . '" style="width: 100%;">';
+                    echo '</a>';
+                    echo '</div>';
+                endforeach;
                 echo '</div>';
-            endforeach;
-            echo '</div>';
-        endif;
-        ?>
+            endif;
+            ?>
+        </div>
     </div>
 </section>

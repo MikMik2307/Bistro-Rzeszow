@@ -64,6 +64,11 @@
             margin:5px;
         }
     }
+    .contact-form-form .contact-form-form-acceptance .wpcf7-list-item label {
+        display: flex;
+        flex-direction: row;
+        align-items: center !important;
+    }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 900px) {

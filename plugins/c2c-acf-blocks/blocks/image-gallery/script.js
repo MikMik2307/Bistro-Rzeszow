@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     $('body').append('<div id="lightbox" style="display:none;"><span class="close">&times;</span><img class="lightbox-content" src=""></div>');
 
     // When an image in the gallery is clicked
-    $('.photo-gallery').on('click', '.gallery-item', function(event) {
+    $('.gallery-row').on('click', '.gallery-item', function(event) {
         event.preventDefault();
 
         var imgSrc = $(this).attr('href');

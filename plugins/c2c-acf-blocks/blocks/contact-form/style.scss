@@ -9,7 +9,7 @@
         font-weight: 500;
     }
     .contact-form-form{
-        .contact-form-form-half-width p {
+        .contact-form-form-half-width{
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -27,7 +27,7 @@
         }
         label{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             color: $darkGreen;
             font-size: $font14;
             line-height: $lineHeight16;
@@ -51,7 +51,54 @@
             display: flex;
             flex-direction: row;
         }
+        .wpcf7-acceptance{
+            input{
+                width: fit-content;
+            }
+            input[type="checkbox"] {
+                accent-color: $lightGreen;
+            }
+            label{
+                display: flex;
+                flex-direction: row;
+                font-size: .972vw;
+                gap: 10px;
+                line-height: 1.167vw;
+                align-items: center;
+            }
+        }
+        .contact-form-label-phone-area {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form-label-email-area {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form-form-half-width {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
+    .contact-form-form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .wpcf7-submit {
+        width: fit-content !important;
+        font-size: $font12 !important;
+        padding: 20px 50px !important;
+        border-right: 4px !important;
+        background-color: $lightGreen !important;
+        color: white !important;
+        border: 1px solid $lightGreen !important;
+    }
+    .required-sign {
+        color: red;
+    }
+
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 900px) {

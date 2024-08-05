@@ -148,18 +148,16 @@ jQuery(document).ready(function ($) {});
 
 jQuery(document).ready(function ($) {
   // Append lightbox container to body
-  $('body').append('<div id="lightbox" style="display:none;"><span class="close">&times;</span><img class="lightbox-content" src=""><div class="caption"></div></div>');
+  $('body').append('<div id="lightbox" style="display:none;"><span class="close">&times;</span><img class="lightbox-content" src=""></div>');
 
   // When an image in the gallery is clicked
   $('.gallery-row').on('click', '.gallery-item', function (event) {
     event.preventDefault();
     var imgSrc = $(this).attr('href');
-    var caption = $(this).find('img').attr('alt');
 
     // Show the lightbox
     $('#lightbox').show();
     $('#lightbox .lightbox-content').attr('src', imgSrc);
-    $('#lightbox .caption').text(caption);
   });
 
   // Close the lightbox when the close button is clicked
