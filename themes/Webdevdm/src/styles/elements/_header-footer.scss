@@ -6,6 +6,10 @@
 	--padding-y: 75px;
 	--padding-x: 48px;
   }
+  .no-detect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
 }
 .menu-top-area{
   display: flex;
@@ -128,16 +132,39 @@
 @media (max-width: 1199px) {
   #wrapper-navbar {
     overflow: hidden;
+    background-color: #173800;
   }
   #navbarNavDropdown .featured {
     display: block !important;
   }
+  .navbar-nav {
+    gap: 0px !important;
+  }
+  .header__navbar{
+    padding-bottom: 0px;
+  }
+  .nav-link{
+    color:white;
+  }
+  .menu-subscription{
+    background-color: #1782FF;
+  }
+  .menu-order-online{
+    background-color:#FF7F1A;
+  }
+  .menu-item {
+      padding: 15px;
+  }
 }
-
+.navbar-toggler-icon{
+  $iconBurger: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' fill='#fff' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image:  #{$iconBurger};
+  opacity: 1;
+}
 .navbar-toggler-icon.cancel {
-  $iconCancel: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path fill='#000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z'/></svg>");
+  $iconCancel: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'><path fill='#fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z'/></svg>");
   background-image: #{$iconCancel};
-  opacity: 0.5;
+  opacity: 1;
 }
 .navbar-toggler:focus{
   box-shadow: none;
@@ -149,11 +176,10 @@
   }
   .header__mobile{
     display:block;
-    padding-left:20px;
-    padding-right: 18px;
     .header__logo {
+      margin-left: 30px;
       img {
-        width: 154px;
+        width: 100px;
         margin-left: 4px;
         margin-top: -2px;
       }
@@ -161,6 +187,7 @@
 
     button.navbar-toggler {
       border: none;
+      margin-right: 30px;
     }
   }
 }
@@ -178,6 +205,9 @@
     font-size: $font12;
     line-height: 22px;
     font-weight: 300;
+    a{
+      color: $fontLight;
+    }
   }
   .footer-business-info-txt-title{
     font-weight: 500;
@@ -283,21 +313,69 @@
 @media only screen and (max-width: 1440px) and (min-width: 900px){}
 @media only screen and (max-width: 900px){
   .footer{
-    padding-left: 30px;
-    padding-bottom: 74px;
+    padding: 30px 0px;
+
+    .footer-logo{
+      width:auto;
+      height: auto;
+      text-align: center;
+    }
     .copy__mobile{
       display: block;
     }
     .copy__desktop{
       display: none;
     }
-    .the__legals_title {
-      margin-left: -17px;
-      margin-top: -4px;
+    .footer-business-info-txt-title{
+      font-size: $fontMobile28;
     }
-    .menu-footer-the-legals-container {
-      margin-left: -51px;
-      margin-top: -8px;
+    .footer-business-info-details-txt{
+      font-size: var(--font14);
+    }
+    .footer-contact-container {
+      align-items: flex-start;
+    }
+    .footer-contact-details{
+      a{
+        font-size: var(--font16);
+      }
+    }
+    .footer-email{
+      margin-bottom: 10px;
+    }
+    .footer-top-area-social-icon {
+      height: 6.25vw;
+      width: 6.25vw;
+    }
+    .row-footer-social-icons{
+      align-self: center;
+    }
+
+    .footer-bottom-area{
+      margin-top:50px;
+      .menu-footer-menu-container{
+        .footer-menu{
+          flex-direction: column !important;
+          gap:0px;
+          li{
+            padding: 0px;
+            margin-left: 15px;
+            a{
+              font-size: var(--font16);
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom-implementation{
+      a{
+        justify-content: flex-end;
+        font-size: var(--font16);
+      }
+      img{
+        height: 14px;
+        width: auto;
+      }
     }
   }
 }

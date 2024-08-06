@@ -56,6 +56,7 @@
             }
             .tile-single-bottom-area{
                 border-radius: 0px 0px 4px 4px;
+                height:1.389vw;
             }
             .tile-single-arrow-img {
                 margin-left: 12vw;
@@ -73,8 +74,47 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
-
+    .wp-block-cab-homepage-hero {
+        padding: 50px 0px;
+        .homepage-hero-txt-area {
+            .homepage-hero-subtitle{
+                font-size: var(--font20);
+            }
+            .homepage-hero-title{
+                font-size: var(--font60);
+                line-height: 100%;
+            }
+            .homepage-hero-text{
+                font-size: var(--font18);
+                line-height: 100%;
+                margin-top: 20px;
+                width: 90%;
+            }
+        }
+        .row-tiles{
+            justify-content: center;
+            gap: 20px;
+        }
+        .homepage-hero-tiles{
+            .tile-single-title{
+                line-height: 100% !important;
+                font-size: var(--font20)!important;
+            }
+            .tile-single-text{
+                line-height: 100%!important;
+                font-size: var(--font16)!important;
+            }
+            .tile-single-bottom-area{
+                height:6.25vw !important;
+            }
+        }
+        .tile-single-arrow-img{
+            margin-left: 45vw !important;
+        }
+        .homepage-hero-img{
+            max-width: 100%;
+            margin-top: 30px;
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){

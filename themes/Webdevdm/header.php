@@ -19,7 +19,8 @@ defined('ABSPATH') || exit;
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
 
@@ -88,7 +89,7 @@ defined('ABSPATH') || exit;
                  aria-labelledby="main-nav-label">
                 <div class="header__logo">
                     <a href="<?php echo esc_url(get_home_url() . '/'); ?>">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/MAD-HATTERS.png">
+                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
                     </a>
                 </div>
                 <button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse"

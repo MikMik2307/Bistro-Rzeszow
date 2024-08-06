@@ -2,21 +2,34 @@
    ========================================================================== */
 $font-name: "Montserrat" !default;
 $font-sans-serif: $font-name, sans-serif !default;
-
-$color-brand-rose: #f73859;
-$color-brand-rose-dark: #e0304e;
-$color-brand-rose-light: #ff3466;
-$color-brand-navy: #2a3045;
-$color-brand-light: #e6e7e8;
 $color-white: #fff;
 $global-transition: all 300ms ease-in-out;
 
-$font12:0.833vw;
-$font14:0.972vw;
-$font16:1.111vw;
+// Default font sizes for screens above 900px
+$font12: 0.833vw;
+$font14: 0.972vw;
+$font16: 1.111vw;
+
+
+// CSS Variables for font sizes
+:root {
+  --font12: #{$font12};
+  --font14: #{$font14};
+  --font16: #{$font16};
+}
+
+// Mobile font sizes
+$fontMobile28: 5.833vw;
+@media screen and (max-width: 900px) {
+  :root {
+    --font12: 2.5vw;  // Adjust this value as needed
+    --font14: 2.917vw;    // Adjust this value as needed
+    --font16: 3.333vw;  // Adjust this value as needed
+  }
+}
 
 //Colors
-$fontLight:#FFF0DF;
-$fontGreenMenuBackground:#365223;
-$fontGreenFooterBackground:#173800;
-$footerContactTxtGreen:#49B500;
+$fontLight: #FFF0DF;
+$fontGreenMenuBackground: #365223;
+$fontGreenFooterBackground: #173800;
+$footerContactTxtGreen: #49B500;

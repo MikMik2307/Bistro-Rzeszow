@@ -16,12 +16,12 @@ $container = get_theme_mod('understrap_container_type');
 <footer class="footer">
 		<div class="container-xl">
 			<div class="row">
-                <div class="col-3">
+                <div class="col-12 col-lg-3">
                     <div class="footer-logo">
                         <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="footer-business-info-txt">
@@ -30,32 +30,34 @@ $container = get_theme_mod('understrap_container_type');
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="footer-business-info-details">
                                 <p class="footer-business-info-details-txt">Bistro Dzień Dobry</p>
                                 <p class="footer-business-info-details-txt">ul.Kwiatowa 2,</p>
                                 <p class="footer-business-info-details-txt">35-206 Rzeszów</p>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="footer-business-info-details">
-                                <p class="footer-business-info-details-txt">REGON: 941233967</p>
-                                <p class="footer-business-info-details-txt">NIP: 247 035 9230</p>
-                                <p class="footer-business-info-details-txt">KRS: 0000927321</p>
+                                <p class="footer-business-info-details-txt no-detect">REGON: 941233967</p>
+                                <p class="footer-business-info-details-txt no-detect">NIP: 247 035 9230</p>
+                                <p class="footer-business-info-details-txt no-detect">KRS: 0000927321</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 footer-contact-container">
+                <div class="col-12 col-lg-6 footer-contact-container">
                     <div class="row">
-                        <div class="col-6 footer-contact-details-container">
-                            <div class="footer-contact-details footer-email"><a href="#" target="_blank">kontakt@bistrodziendobry.pl</a></div>
-                        </div>
-                        <div class="col-6 footer-contact-details-container">
-                            <div class="footer-contact-details footer-phone"><a href="#" target="_blank">+48 23 683 44 24</a></div>
+                        <div class="footer-contact-details-container-area" >
+                            <div class="col-12 col-lg-6 footer-contact-details-container">
+                                <div class="footer-contact-details footer-email"><a href="mailto:kontakt@bistrodziendobry.pl" target="_blank">kontakt@bistrodziendobry.pl</a></div>
+                            </div>
+                            <div class="col-12 col-lg-6 footer-contact-details-container">
+                                <div class="footer-contact-details footer-phone"><a href="tel:+48236834424" target="_blank">+48 23 683 44 24</a></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row row-footer-social-icons">
                         <div class="col-12">
                             <div class="footer-social-icons">
                                 <a href="#" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/Facebook-icon-footer.png"></a>
@@ -69,7 +71,7 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="footer-bottom-area">
                     <div class="footer-bottom-area-content">
                         <div class="row no-margin footer-bottom-row">
-                            <div class="col-10 no-margin no-padding">
+                            <div class="col-12 col-lg-10 no-margin no-padding">
                                 <div class="footer-bottom-menu ">
                                     <?php
                                     wp_nav_menu(
@@ -84,7 +86,7 @@ $container = get_theme_mod('understrap_container_type');
                                     ?>
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-12 col-lg-2">
                                 <div class="footer-bottom-implementation">
                                     <a href="#" target="_blank">Realizacja: <img class="footer-bottom-implementation-img" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/implementation-logo.png"></a>
                                 </div>

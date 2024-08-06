@@ -6,12 +6,40 @@ $font10:0.694vw;
 $font12: 0.833vw;
 $font14: 0.972vw;
 $font16:1.111vw;
+$font18:1.111vw;
 $font20: 1.389vw;
 $font24: 1.667vw;
 $font48: 3.333vw;;
 $font60: 4.167vw;
 $font95: 6.607vw;
 
+// CSS Variables for font sizes
+:root {
+  --font10: #{$font10};
+  --font12: #{$font12};
+  --font14: #{$font14};
+  --font16: #{$font16};
+  --font18: #{$font18};
+  --font20: #{$font20};
+  --font24: #{$font24};
+  --font48: #{$font48};
+  --font60: #{$font60};
+  --font95: #{$font95};
+}
+
+// Mobile font sizes
+$fontMobile28: 5.833vw;
+@media screen and (max-width: 900px) {
+  :root {
+    --font10: 2.083vw;  // Adjust this value as needed
+    --font12: 2.5vw;  // Adjust this value as needed
+    --font14: 2.917vw;    // Adjust this value as needed
+    --font16: 3.333vw;  // Adjust this value as needed
+    --font18: 3.75vw;  // Adjust this value as needed
+    --font20: 4.167vw;  // Adjust this value as needed
+    --font60: 12.5vw;  // Adjust this value as needed
+  }
+}
 //Line Height
 $lineHeight15:1.042vw;
 $lineHeight14:0.972vw;
