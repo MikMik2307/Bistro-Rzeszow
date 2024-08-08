@@ -21,7 +21,7 @@ $container = get_theme_mod('understrap_container_type');
                         <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-4">
                     <div class="row">
                         <div class="col-12">
                             <div class="footer-business-info-txt">
@@ -46,7 +46,7 @@ $container = get_theme_mod('understrap_container_type');
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 footer-contact-container">
+                <div class="col-12 col-lg-5 footer-contact-container">
                     <div class="row">
                         <div class="footer-contact-details-container-area" >
                             <div class="col-12 col-lg-6 footer-contact-details-container">

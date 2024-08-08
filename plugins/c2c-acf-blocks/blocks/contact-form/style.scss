@@ -102,13 +102,49 @@
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 900px) {
-    .wp-block-cab-abonament {
 
-    }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
-
+    .wp-block-cab-contact-form{
+        padding: 50px 0px;
+        .contact-form-title {
+            margin-bottom: 20px;
+        }
+        .contact-form-title-txt{
+            font-size: var(--font48);
+        }
+        .contact-form-form-half-width {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap:10px !important;
+        }
+        .contact-form-label-phone-area {
+            gap: 10px;
+        }
+        .contact-form-label-email-area {
+            gap: 10px;
+        }
+        .contact-form-form{
+            label{
+                font-size: var(--font16);
+                line-height: 100%;
+            }
+            input{
+                font-size: var(--font16);
+            }
+            textarea{
+                font-size: var(--font16);
+            }
+            .wpcf7-acceptance{
+                label{
+                    font-size: var(--font16);
+                    line-height: 130%;
+                }
+            }
+        }
+        .wpcf7-submit {
+            font-size: var(--font16) !important;
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){

@@ -64,11 +64,6 @@
             margin:5px;
         }
     }
-    .contact-form-form .contact-form-form-acceptance .wpcf7-list-item label {
-        display: flex;
-        flex-direction: row;
-        align-items: center !important;
-    }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 900px) {
@@ -77,8 +72,35 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
-
+    .wp-block-cab-contact-info{
+        padding: 50px 0px;
+        .contact-info-title {
+            .contact-info-title-txt{
+                font-size: var(--font60);
+            }
+        }
+        .contact-info-location-single-container{
+            border-right: 0px;
+            border-bottom: 1px solid $lightGreen;
+            margin-bottom: 30px;
+            .contact-info-location-single-name{
+                color: $lightGreen;
+                font-size: var(--font18);
+                line-height: 100%;
+            }
+            .contact-info-location-single-adress{
+                font-size: var(--font16);
+            }
+            .contact-info-location-single-phone{
+                font-size: var(--font16);
+            }
+            .contact-info-location-single-email{
+                font-size: var(--font16);
+            }
+        }
+        .contact-info-additional-info{
+            font-size: var(--font16);
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){

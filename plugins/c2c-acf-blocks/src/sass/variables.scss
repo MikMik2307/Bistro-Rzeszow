@@ -2,16 +2,16 @@
 $fontFamily: 'Poppins', sans-serif;
 $fontFamilyAdditional:'Abril Display';
 //Font Sizes VW
-$font10:0.694vw;
-$font12: 0.833vw;
-$font14: 0.972vw;
-$font16:1.111vw;
-$font18:1.111vw;
-$font20: 1.389vw;
-$font24: 1.667vw;
-$font48: 3.333vw;;
-$font60: 4.167vw;
-$font95: 6.607vw;
+$font10: 10px;
+$font12: 12px;
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font20: 20px;
+$font24: 24px;
+$font48: 48px;
+$font60: 60px;
+$font95: 95px;
 
 // CSS Variables for font sizes
 :root {
@@ -28,28 +28,31 @@ $font95: 6.607vw;
 }
 
 // Mobile font sizes
-$fontMobile28: 5.833vw;
+$fontMobile28: 28px;
 @media screen and (max-width: 900px) {
   :root {
-    --font10: 2.083vw;  // Adjust this value as needed
-    --font12: 2.5vw;  // Adjust this value as needed
-    --font14: 2.917vw;    // Adjust this value as needed
-    --font16: 3.333vw;  // Adjust this value as needed
-    --font18: 3.75vw;  // Adjust this value as needed
-    --font20: 4.167vw;  // Adjust this value as needed
-    --font60: 12.5vw;  // Adjust this value as needed
+    --font10: 10px;  // Adjust this value as needed
+    --font12: 12px;  // Adjust this value as needed
+    --font14: 14px;    // Adjust this value as needed
+    --font16: 16px;  // Adjust this value as needed
+    --font18: 18px;  // Adjust this value as needed
+    --font20: 20px;  // Adjust this value as needed
+    --font24: 24px;  // Adjust this value as needed
+    --font48: 48px;  // Adjust this value as needed
+    --font60: 60px;  // Adjust this value as needed
+    --font95: 95px;  // Adjust this value as needed
   }
 }
 //Line Height
-$lineHeight15:1.042vw;
-$lineHeight14:0.972vw;
-$lineHeight16:1.167vw;
-$lineHeight21: 1.458vw;
-$lineHeight24:1.667vw;
-$lineHeight30:2.083vw;
-$lineHeight32:2.222vw;
-$lineHeight36:2.5vw;
-$lineHeight102: 7.069vw;
+$lineHeight15:15px;
+$lineHeight14:14px;
+$lineHeight16:16px;
+$lineHeight21: 21px;
+$lineHeight24: 24px;
+$lineHeight30:30px;
+$lineHeight32:32px;
+$lineHeight36:36px;
+$lineHeight102: 102px;
 
 //colors
 $mainColor: #967675;

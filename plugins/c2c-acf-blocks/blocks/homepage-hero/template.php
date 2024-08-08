@@ -39,7 +39,7 @@
                                 $tile_text= $tile['tile_text'];
                                 $tile_color= $tile['tile_color'];
                                 $tile_link = $tile['tile_link'];
-                                echo '<div class="col-8 col-lg'.$col_width.' ">';
+                                echo '<div class="col-8 col-lg-'.$col_width.' ">';
                                 echo '<a class="tile-single" href="'.$tile_link.'">';
                                 echo '<div class="tile-single-txt-container">';
                                 echo '<p class="tile-single-title">'.esc_html($tile_title).'</p>';

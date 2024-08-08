@@ -59,12 +59,16 @@
                 height:1.389vw;
             }
             .tile-single-arrow-img {
-                margin-left: 12vw;
-                margin-top: -3vh;
+                margin-left: 75%;
+                margin-top: -10%;
                 width: 32px;
                 height: 32px;
             }
         }
+
+    }
+    .homepage-hero-img{
+        width: 100% !important;
     }
 }
 
@@ -109,10 +113,10 @@
             }
         }
         .tile-single-arrow-img{
-            margin-left: 45vw !important;
+
         }
         .homepage-hero-img{
-            max-width: 100%;
+            width: 100%;
             margin-top: 30px;
         }
     }

@@ -71,8 +71,39 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
+    .wp-block-cab-locations {
+        padding: 50px 0px;
 
+        .locations-title {
+            font-size: var(--font24);
+            line-height: 100%;
+        }
+        .locations-cards-row {
+            gap: 20px;
+        }
+        .location-single-container {
+            background-color: #fff;
+
+            padding: 20px;
+            border-radius: 8px;
+
+            .location-single-name {
+                font-size: var(--font24);
+                line-height: 100%;
+            }
+
+            .location-single-adress {
+                font-size: var(--font16);
+                line-height: 100%;
+            }
+            .location-single-button-container {
+                .location-single-button{
+                    font-size: var(--font16);
+                    line-height: 100%;
+                    padding: 15px 10px;
+                }
+            }
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){

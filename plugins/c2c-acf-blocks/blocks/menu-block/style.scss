@@ -43,8 +43,24 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
-
+    .wp-block-cab-menu-block{
+        padding: 50px 0px;
+        .menu-block-title{
+            .menu-block-title-txt{
+                font-size: var(--font60);
+            }
+        }
+        .menu-category-single{
+            .menu-category-single-category-name{
+                font-size: var(--font24);
+            }
+            .menu-category-single-category-description{
+                font-size: var(--font10);
+            }
+        }
+        .menu-product-single {
+            font-size: var(--font14);
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){

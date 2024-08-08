@@ -11,6 +11,11 @@
     -webkit-user-select: none;
   }
 }
+.menu-main-logo{
+  img{
+    height: 100px;
+  }
+}
 .menu-top-area{
   display: flex;
   justify-content: flex-end;
@@ -197,8 +202,11 @@
   padding-top: 140px;
   padding-bottom: 129px;
   .footer-logo{
-    height:5.408vw;
-    width: 9.981vw;
+    height:100%;
+    width: 100%;
+    img{
+      width: 200px;
+    }
   }
   .footer-business-info-details-txt{
     color:$fontLight;

@@ -39,8 +39,23 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .wp-block-cab-abonament {
-
+    .wp-block-cab-text-section{
+        padding: 50px 0px;
+        .text-section-area{
+            .text-section-subtitle{
+                font-size: var(--font20);
+                line-height:100%;
+            }
+            .text-section-title{
+                font-size: var(--font60);
+                line-height: 100%;
+            }
+            .text-section-text{
+                margin-top: 20px;
+                font-size: var(--font16);
+                line-height: 100%;
+            }
+        }
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px){
