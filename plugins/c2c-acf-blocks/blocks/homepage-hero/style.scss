@@ -13,7 +13,7 @@
         .homepage-hero-subtitle{
             font-size: $font24;
             line-height: $lineHeight30;
-            font-weight: 500;
+            font-weight:400;
             color: $lightGreen;
             &::before {
                 content: url("img/steps-dot.svg");
@@ -31,13 +31,15 @@
             line-height: $lineHeight24;
             font-weight: 500;
             color: $lightGray;
-            width: 25vw;
+            width: 52%;
+            margin: 30px 0px;
         }
         .tile-single{
             .tile-single-txt-container{
                 background-color: white;
                 padding: 30px 40px;
                 border-radius: 4px 4px 0px 0px;
+                transition: 0.3s;
                 p{
                     margin:0;
                 }

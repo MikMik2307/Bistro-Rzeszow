@@ -23,7 +23,7 @@
 <section <?php echo $wrapper_attributes; ?> style=" background:url(<?php echo esc_url($backgroundOverlay)?>) <?php echo $backgroundColor?>;">
     <div class="container">
         <div class="row homepage-hero-row">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-7">
                 <div class="homepage-hero-txt-area">
                     <p class="homepage-hero-subtitle"><?php echo esc_html($subtitle)?></p>
                     <h1 class="homepage-hero-title"> <?php echo wp_kses_post($title)?></h1>
@@ -41,7 +41,7 @@
                                 $tile_link = $tile['tile_link'];
                                 echo '<div class="col-8 col-lg-'.$col_width.' ">';
                                 echo '<a class="tile-single" href="'.$tile_link.'">';
-                                echo '<div class="tile-single-txt-container">';
+                                echo '<div class="tile-single-txt-container" data-hover-color="'.$tile_color.'">';
                                 echo '<p class="tile-single-title">'.esc_html($tile_title).'</p>';
                                 echo '<p class="tile-single-text">'.esc_html($tile_text).'</p>';
                                 echo '</div>';
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-5">
                 <img class="homepage-hero-img" src="<?php echo esc_url($img)?>">
             </div>
         </div>

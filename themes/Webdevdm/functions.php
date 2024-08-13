@@ -203,3 +203,52 @@ function enqueue_custom_script() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+class Walker_Nav_Menu_Custom extends Walker_Nav_Menu {
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $indent = ($depth) ? str_repeat("\t", $depth) : '';
+
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $classes[] = 'menu-item-' . $item->ID;
+
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+
+        $id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args);
+        $id = $id ? ' id="' . esc_attr($id) . '"' : '';
+
+        $atts = array();
+        $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+        $atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+        $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+        $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+
+        $attributes = '';
+        foreach ( $atts as $attr => $value ) {
+            if ( ! empty( $value ) ) {
+                $value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+                $attributes .= ' ' . $attr . '="' . $value . '"';
+            }
+        }
+
+        // Start the <a> tag here
+        $output .= '<a'. $attributes .' class="menu-a-link">';
+
+        // Now start the <li> tag inside <a>
+        $output .= '<li' . $id . $class_names . '>';
+
+        // Add the title inside the <li>
+        $output .= $args->before;
+        $output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+        $output .= $args->after;
+    }
+
+    function end_el(&$output, $item, $depth = 0, $args = null) {
+        // Close the <li> tag
+        $output .= '</li>';
+
+        // Then close the <a> tag
+        $output .= '</a>';
+    }
+}

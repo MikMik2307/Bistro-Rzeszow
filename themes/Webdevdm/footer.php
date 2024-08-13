@@ -18,7 +18,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="footer-logo">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
+                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.svg">
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -60,8 +60,8 @@ $container = get_theme_mod('understrap_container_type');
                     <div class="row row-footer-social-icons">
                         <div class="col-12">
                             <div class="footer-social-icons">
-                                <a href="#" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/Facebook-icon-footer.png"></a>
-                                <a href="#" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon-footer.png"></a>
+                                <a href="https://www.facebook.com/DzienDobryBistro" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/Facebook-icon-footer.svg"></a>
+                                <a href="https://www.instagram.com/bistrodziendobryrzeszow/" target="_blank"><img class="footer-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon-footer.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ $container = get_theme_mod('understrap_container_type');
                             </div>
                             <div class="col-12 col-lg-2">
                                 <div class="footer-bottom-implementation">
-                                    <a href="#" target="_blank">Realizacja: <img class="footer-bottom-implementation-img" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/implementation-logo.png"></a>
+                                    <a href="#" target="_blank">Realizacja: <img class="footer-bottom-implementation-img" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/implementation-logo.svg"></a>
                                 </div>
                             </div>
                         </div>

@@ -32,8 +32,8 @@ defined('ABSPATH') || exit;
                     <div class="menu-top-area">
                         <div class="menu-top-area-phone"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-phone-icon">17 728 12 14</p></a></div>
                         <div class="menu-top-area-email"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-mail-icon">kontakt@bistrodziendobry.pl</p></a></div>
-                        <div class="menu-top-area-social-fb"><a href="#" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/facebook-icon.png"></a></div>
-                        <div class="menu-top-area-social-ig"><a href="#" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon.png"></a></div>
+                        <div class="menu-top-area-social-fb"><a href="https://www.facebook.com/DzienDobryBistro" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/facebook-icon.svg"></a></div>
+                        <div class="menu-top-area-social-ig"><a href="https://www.instagram.com/bistrodziendobryrzeszow/" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon.svg"></a></div>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ defined('ABSPATH') || exit;
                                     'theme_location'  => 'Main-Menu-Home',
                                     'menu_class'      => 'menu-list-desktop',
                                     'menu_id'         => 'Main-menu',
-                                    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+                                    'walker'         => new Walker_Nav_Menu_Custom(),
                                 )
                             );
                             ?>
@@ -114,3 +114,47 @@ defined('ABSPATH') || exit;
             </nav>
         </div>
     </header>
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/popup-close.svg"></button>
+            <h2 class="popup-title">Wybierz lokal</h2>
+            <ul class="pop-up-locals">
+                <a href="https://www.pyszne.pl/menu/bistro-dzie-dobry-pigonia-rzeszw" target="_blank">
+                    <li class="pop-up-locals-single">
+                        <div class="pop-up-locals-single-top-area">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/popup-logo.svg">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/arrow-popup.svg">
+                        </div>
+                        <div class="pop-up-locals-single-content">
+                            <p  class="pop-up-locals-single-content-name">Rzeszów (Biblioteka UR)</p>
+                            <p  class="pop-up-locals-single-content-address">ul.Pigonia 8</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="https://www.pyszne.pl/menu/bistro-dzien-dobry-krakowska" target="_blank">
+                    <li class="pop-up-locals-single">
+                        <div class="pop-up-locals-single-top-area">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/popup-logo.svg">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/arrow-popup.svg">
+                        </div>
+                        <div class="pop-up-locals-single-content">
+                            <p  class="pop-up-locals-single-content-name">Rzeszów</p>
+                            <p  class="pop-up-locals-single-content-address">ul.Krakowska 14</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="https://www.pyszne.pl/menu/bistro-dzie-dobry-mielec" target="_blank">
+                    <li class="pop-up-locals-single">
+                        <div class="pop-up-locals-single-top-area">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/popup-logo.svg">
+                            <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/arrow-popup.svg">
+                        </div>
+                        <div class="pop-up-locals-single-content">
+                            <p  class="pop-up-locals-single-content-name">Mielec</p>
+                            <p  class="pop-up-locals-single-content-address">ul.Mickiewicza 13</p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>

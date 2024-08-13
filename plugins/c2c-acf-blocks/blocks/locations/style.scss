@@ -39,9 +39,10 @@
             line-height: $lineHeight24;
             font-weight: 500;
             color: $darkGreen;
-
+            display: flex;
+            align-items: center;
             &::before {
-                content: url("img/MapPin.png");
+                content: url("img/MapPin.svg");
                 width: 16px;
                 height: 16px;
                 display: inline-block;
@@ -60,6 +61,7 @@
                 font-size: $font16;
                 line-height: $lineHeight24;
                 font-weight: 500;
+                padding: 10px 20px;
             }
         }
     }
