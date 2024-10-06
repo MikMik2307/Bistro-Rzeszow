@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
     $steps  = get_field( 'steps' );
     $step_count = 0;
+    $step_count_line = 1;
     $first_step = get_field("step_one_group");
     $second_step = get_field("step_two_group");
 
@@ -25,10 +26,11 @@ ini_set('display_startup_errors', 1);
                             foreach( $steps as $step ) {
                                 $step_txt = $step['step_txt'];
                                 $step_count ++;
+                                $step_count_line ++;
                                 echo '<li class="step-txt-single step '."step-$step_count".'">';
                                 echo esc_html( $step_txt );
                                 echo '</li>';
-                                echo '<span class="step-line step '."step-$step_count".'">';
+                                echo '<span class="step-line step '."step-$step_count_line".'">';
                                 echo '</span>';
                             }
                             echo '</ul>';
@@ -72,7 +74,7 @@ ini_set('display_startup_errors', 1);
                                     <p class="introduction-delivery-annotation"><?php echo esc_html($first_step['first_step_form_annotation']); ?></p>
                                     <div class="introduction-deliver-form">
                                         <p class="introduction-deliver-form-title">Podaj dane</p>
-                                        <form id="form-deliver-details">
+                                        <div id="form-deliver-details">
                                             <div class="form-row">
                                                 <div class="form-input-single">
                                                     <label for="UserName">Imię i Nazwisko <span class="delivery-form-required">*</span></label>
@@ -89,7 +91,7 @@ ini_set('display_startup_errors', 1);
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-input-single">
-                                                    <label for="UserName">Adres<span class="delivery-form-required">*</span></label>
+                                                    <label for="UserAdres">Adres<span class="delivery-form-required">*</span></label>
                                                     <input type="text" id="UserAdres" name="UserAdres" placeholder="Podaj Adres" class="required" required>
                                                 </div>
                                                 <div class="form-input-single">
@@ -99,15 +101,21 @@ ini_set('display_startup_errors', 1);
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-input-single">
+                                                    <label for="UserPostCode">Kod Pocztowy<span class="delivery-form-required">*</span></label>
+                                                    <input type="phone" id="UserPostCode" name="UserPostCode" placeholder="Podaj kod pocztowy" class="required" required>
+                                                </div>
+                                                <div class="form-input-single">
                                                     <label for="UserPhone">Telefon<span class="delivery-form-required">*</span></label>
                                                     <input type="phone" id="UserPhone" name="UserPhone" placeholder="Podaj nr telefonu" class="required" required>
                                                 </div>
+                                            </div>
+                                            <div class="form-row">
                                                 <div class="form-input-single">
                                                     <label for="UserEmail">E-mail<span class="delivery-form-required">*</span></label>
                                                     <input type="email" id="UserEmail" name="UserEmail" placeholder="Podaj adres e-mail" class="required" required>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +123,7 @@ ini_set('display_startup_errors', 1);
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-nav-btn-container first-step-btn">
-                                    <input type="button" name="next" class="next action-button" value="Przejdź dalej" />
+                                    <input  id="btn-customer-details-section" type="button" name="next" class="next action-button" value="Przejdź dalej" />
                                 </div>
                             </div>
                         </div>
@@ -124,11 +132,11 @@ ini_set('display_startup_errors', 1);
                     <div class="row">
                         <div class="col-12">
                             <div class="diet-type-container">
-                                <p class="diet-type-title"><?php echo esc_html($second_step['step_two_title']);?></p>
+                                <p class="diet-type-title"><?php echo esc_html($second_step['step_two_title']); ?></p>
                                 <?php
-                                if($second_step) {
+                                if ($second_step) {
                                     $product_list = $second_step['abonamenty_list'];
-                                    if($product_list){
+                                    if ($product_list) {
                                         echo '<ul id="products-list" class="products-list">';
                                         if (is_array($product_list)) {
                                             foreach ($product_list as $product) {
@@ -139,14 +147,16 @@ ini_set('display_startup_errors', 1);
                                                         $product_title = $wc_product->get_name();
                                                         $product_description = $wc_product->get_description();
 
-                                                        echo '<li id="'.$product_id.'" class="product-single product-'.$product_id.'">';
-                                                        echo'<div class="product-single-txt-container">';
-                                                        echo '<p class="product-list-product-name">' .esc_html($product_title). '</p>';
+                                                        echo '<li id="' . $product_id . '" class="product-single product-' . $product_id . '">';
+                                                        echo '<div class="product-single-txt-container">';
+                                                        echo '<div class="product-single-txt-container-txt">';
+                                                        echo '<p class="product-list-product-name">' . esc_html($product_title) . '</p>';
                                                         echo '<p class="product-list-product-description">' . wp_kses_post($product_description) . '</p>';
-                                                        echo'</div>';
-                                                        echo'<div class="product-single-icon-container">';
-                                                        echo'<img src="'.plugin_dir_url(dirname(__FILE__, 2)) . 'img/icon-add.png'.'">';
-                                                        echo'</div>';
+                                                        echo '</div>';
+                                                        echo '</div>';
+//                                                        echo '<div class="product-single-icon-container">';
+//                                                        echo '<img src="' . plugin_dir_url(dirname(__FILE__, 2)) . 'img/icon-add.png' . '">';
+//                                                        echo '</div>';
                                                         echo '</li>';
                                                     }
                                                 }
@@ -155,76 +165,24 @@ ini_set('display_startup_errors', 1);
                                         echo '</ul>';
                                     }
                                 }
-
-                              ?>
+                                ?>
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12">
                             <div class="form-nav-btn-container">
                                 <input type="button" name="back" class="back action-button" value="Wstecz" />
-                                <input type="button" name="next" class="next action-button" value="Przejdź dalej" />
+                                <input type="button" name="next" id="render-product-attributes" class="next action-button" value="Przejdź dalej" />
                             </div>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset id="productVariationsFieldset" class="fieldset-3">
-                    <div class="product-attributes-container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="single-product-attribute-container">
-                                  <?php  if (isset($_COOKIE['Selected_Product'])) {
-                                        $product_id = intval($_COOKIE['Selected_Product']);
-                                        $product = wc_get_product($product_id);
-
-                                        if ($product && $product->is_type('variable')) {
-                                            $variations = $product->get_available_variations();
-                                            ?>
-                                            <div id="product-variations">
-                                                <p class="diet-type-title">Czas</p>
-                                                <ul class="products-list">
-                                                    <?php foreach ($variations as $variation) : ?>
-                                                        <li class="product-single">
-                                                            <?php $variation_obj = wc_get_product($variation['variation_id']);
-                                                                echo'<div class="product-single-txt-container">';
-                                                                echo '<p class="product-list-product-name">' .$variation_obj->get_name(). '</p>';
-                                                                echo '<p class="product-list-product-description">' .$variation_obj->get_description(). '</p>';
-                                                                echo '<p class="product-list-product-price">' . wc_price($variation_obj->get_price()). '</p>';
-                                                                echo'</div>';
-                                                                echo'<div class="product-single-icon-container">';
-                                                                echo'<img src="'.plugin_dir_url(dirname(__FILE__, 2)) . 'img/icon-add.png'.'">';
-                                                                echo'</div>';
-                                                            ?>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                </ul>
-                                            </div>
-                                            <script>
-                                                jQuery(document).ready(function($) {
-                                                    // You can add custom JavaScript here if needed
-                                                });
-                                            </script>
-                                            <?php
-                                        } else {
-                                            echo '<p>No variations found for the selected product.</p>';
-                                        }
-                                    } else {
-                                        echo '<p>No product selected.</p>';
-                                    }?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="form-nav-btn-container">
-                                <input type="button" name="back" class="back action-button" value="Wstecz" />
-                                <input type="button" name="next" class="next action-button" value="Przejdź dalej" />
-                            </div>
-                        </div>
-                    </div>
+                    <!-- This content will be loaded dynamically via AJAX -->
+                </fieldset>
+                <fieldset id="orderSummaryFieldset" class="fieldset-4">
+                    <!-- This content will be loaded dynamically via AJAX -->
                 </fieldset>
             </div>
         </div>

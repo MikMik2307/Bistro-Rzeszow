@@ -207,17 +207,36 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    .selected-product-active{
-      border: 2px solid $titleGreen !important;
+    .selected-product-active,.product-time-variation-active{
+      border: 2px solid $lightGreen !important;
+      background-color: $greenbackground !important;
+      .product-single-txt-container{
+        &::after {
+          content: url("img/tick-icon.svg") !important;
+          width: fit-content;
+          display: inline-block;
+        }
+      }
     }
-    .product-single{
+    .product-single,.product-time-variation{
       list-style: none;
       border: 1px solid $borderGray;
       border-radius: 8px;
       padding: 1.111vw;
       display: flex;
       justify-content: space-between;
-
+      .product-single-txt-container{
+        display: flex;
+        width: 100%;
+        .product-single-txt-container-txt {
+          width: 100%;
+        }
+        &::after {
+          content: url("img/icon-add.svg");
+          width: fit-content;
+          display: inline-block;
+        }
+      }
       &:hover{
         border: 1px solid $textLightGreen;
       }
@@ -235,6 +254,195 @@
         a{
           color: $textLightGreen;
           text-decoration: underline !important;
+        }
+      }
+    }
+  }
+  #productVariationsFieldset {
+    display: none;
+  }
+  #orderSummaryFieldset{
+    display: none;
+  }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  /* Hide default calendar icon */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none; /* Hide the default calendar icon */
+  }
+
+  /* Style the container */
+  .date-picker-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Style the placeholder container */
+  .placeholder-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Style the input field */
+  .date-input {
+    padding-right: 40px; /* Space for the custom icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* Style the custom icon */
+  .custom-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* Style the icon image */
+  .custom-icon img {
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+  }
+  .product-attributes-container{
+    .diet-type-title,.product-list-product-price,.weekend-attribute-section-title,.date-attribute-section-title,.allergens-attribute-section-title{
+      font-size: 24px;
+      font-weight: 400;
+      color: $titleGreen;
+    }
+    .attribute-title,.date-picker-section-txt,.allergens-attribute-section-container-title{
+      font-size: 20px;
+      font-weight: 400;
+      color: $titleGreen;
+    }
+    .date-picker-section-txt-annotation{
+      font-size: 16px;
+      color:$textLightGreen;
+      margin-top: 10px;
+    }
+    .weekend-attribute-section-checkbox-container,.date-picker-section,.allergens-attribute-section-container{
+      border: 1px solid #ebebeb;
+      border-radius: 8px;
+      padding: 1.111vw;
+    }
+      .weekend_option,.allergens-attribute-section{
+        .container-checkbox{
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 16px;
+          color:$textLightGreen;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+        }
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 22px;
+          width: 22px;
+          background-color: transparent;
+          border: 1px solid $lightGreen;
+          border-radius: 4px;
+        }
+        /* On mouse-over, add a grey background color */
+        //.container-checkbox:hover input ~ .checkmark {
+        //  background-color: #ccc;
+        //}
+        /* When the checkbox is checked, add a blue background */
+        .container-checkbox input:checked ~ .checkmark {
+          background-color: $lightGreen;
+        }
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        /* Show the checkmark when checked */
+        .container-checkbox input:checked ~ .checkmark:after {
+          display: block;
+        }
+        /* Style the checkmark/indicator */
+        .container-checkbox .checkmark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    .date-attribute-section {
+      margin-top: 20px;
+    }
+    .date-input {
+      padding: 16px;
+      width: 320px;
+    }
+    .allergens-attribute-list{
+      display: none;
+      background-color: #eef5e4;
+      border: 1px solid #ebebeb;
+      border-radius: 8px;
+      padding: 1.111vw;
+      .container-checkbox{
+        font-weight: 700;
+      }
+    }
+    }
+  .order-summary-container{
+    .order-summary-subtitle{
+      font-size: $font24;
+      line-height: $lineHeight36;
+      color: $titleGreen;
+      font-weight: 500;
+    }
+    .order-summary{
+      margin: 0;
+      padding: 0;
+      li{
+        list-style: none;
+        border: 1px solid $borderGray;
+        border-radius: 8px;
+        padding: 1.111vw;
+        display: flex;
+        flex-direction: column;
+        .order-summary-restaurant-location-city,.order-summary-customer-location-title{
+            color: $titleGreen;
+            font-size: $font20;
+            line-height: $lineHeight30;
+            font-weight: 600;
+        }
+        .order-summary-restaurant-location-street,.order-summary-customer-location-txt{
+          color: $textLightGreen;
+          font-size: $font16;
+          line-height: $lineHeight24;
+          font-weight: 500;
+        }
+        img{
+          width: 40px;
         }
       }
     }

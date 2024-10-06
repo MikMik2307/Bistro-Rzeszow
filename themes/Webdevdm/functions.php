@@ -252,3 +252,103 @@ class Walker_Nav_Menu_Custom extends Walker_Nav_Menu {
         $output .= '</a>';
     }
 }
+function display_woocommerce_checkout_form() {
+    // Check if WooCommerce is active and the checkout page is not already loaded
+    if ( class_exists( 'WooCommerce' ) && !is_checkout() ) {
+        // Display WooCommerce checkout form
+        if ( WC()->cart->get_cart_contents_count() > 0 ) {
+            // Load the checkout template
+            wc_get_template( 'checkout/form-checkout.php' );
+        } else {
+            echo '<p>' . __( 'Your cart is empty.', 'text-domain' ) . '</p>';
+        }
+    } else {
+        echo '<p>' . __( 'WooCommerce is not active or you are already on the checkout page.', 'text-domain' ) . '</p>';
+    }
+}
+// Function to handle adding product with variations to the cart
+function add_custom_product_to_cart() {
+    // Verify nonce for security
+    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'add_custom_product_nonce' ) ) {
+        wp_send_json_error( array( 'message' => 'Invalid nonce.' ) );
+        wp_die();
+    }
+
+    // Check if required POST parameters are present
+    if ( ! isset( $_POST['product_id'] ) || ! isset( $_POST['quantity'] ) || ! isset( $_POST['variation'] ) ) {
+        wp_send_json_error( array( 'message' => 'Missing parameters.' ) );
+        wp_die();
+    }
+
+    $product_id = intval( $_POST['product_id'] );
+    $quantity = intval( $_POST['quantity'] );
+    $custom_value = sanitize_text_field( $_POST['custom_value'] );
+    $variation = $_POST['variation'];
+
+    // Get the product
+    $product = wc_get_product( $product_id );
+
+    // Validate product
+    if ( ! $product || ! $product->exists() ) {
+        wp_send_json_error( array( 'message' => 'Invalid product.' ) );
+        wp_die();
+    }
+
+    // Ensure product is a variable product
+    if ( $product->is_type( 'variable' ) ) {
+        $variation_id = isset( $variation['variation_id'] ) ? intval( $variation['variation_id'] ) : 0;
+        $variation_attributes = isset( $variation['attributes'] ) ? $variation['attributes'] : array();
+
+        // Add product to cart
+        $cart_item_data = array(
+            'custom_value' => $custom_value, // Custom data to be added to cart item
+        );
+
+        $added = WC()->cart->add_to_cart( $product_id, $quantity, $variation_id, $variation_attributes, $cart_item_data );
+
+        if ( $added ) {
+            wp_send_json_success( array( 'message' => 'Product added to cart successfully.' ) );
+        } else {
+            wp_send_json_error( array( 'message' => 'Failed to add product to cart.' ) );
+        }
+    } else {
+        wp_send_json_error( array( 'message' => 'Product is not a variable product.' ) );
+    }
+
+    wp_die();
+}
+add_action( 'wp_ajax_add_custom_product_to_cart', 'add_custom_product_to_cart' );
+add_action( 'wp_ajax_nopriv_add_custom_product_to_cart', 'add_custom_product_to_cart' );
+
+function handle_my_custom_action() {
+    if (isset($_POST['selectedProduct'])) {
+        $selectedProduct = sanitize_text_field($_POST['selectedProduct']);
+        echo "Selected product received: " . $selectedProduct;
+    } else {
+        echo "No selected product received.";
+    }
+    wp_die(); // Required to terminate immediately and return a proper response
+}
+
+add_action('wp_ajax_my_custom_action', 'handle_my_custom_action');
+add_action('wp_ajax_nopriv_my_custom_action', 'handle_my_custom_action');
+
+function add_custom_product_text_field() {
+    echo '<div class="custom-product-text-field">
+        <label for="custom_product_field">Custom Value:</label>
+        <input type="text" id="custom_product_field" name="custom_product_field" value="" />
+    </div>';
+}
+add_action('woocommerce_before_add_to_cart_button', 'add_custom_product_text_field');
+
+function clear_cart() {
+    if ( isset( $_POST['action'] ) && $_POST['action'] === 'clear_cart' ) {
+        if ( WC()->cart ) {
+            WC()->cart->empty_cart();
+        }
+        wp_send_json_success();
+    }
+    wp_send_json_error();
+}
+add_action('wp_ajax_clear_cart', 'clear_cart');
+add_action('wp_ajax_nopriv_clear_cart', 'clear_cart');

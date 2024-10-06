@@ -30,8 +30,8 @@ defined('ABSPATH') || exit;
             <div class="row">
                 <div class="col-12">
                     <div class="menu-top-area">
-                        <div class="menu-top-area-phone"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-phone-icon">17 728 12 14</p></a></div>
-                        <div class="menu-top-area-email"><a href="#" target="_blank"><p class="menu-top-area-contact-txt contact-mail-icon">kontakt@bistrodziendobry.pl</p></a></div>
+                        <div class="menu-top-area-phone"><a href="tel:+48236834424" target="_blank"><p class="menu-top-area-contact-txt contact-phone-icon">+48 23 683 44 24</p></a></div>
+                        <div class="menu-top-area-email"><a href="mailto:kontakt@bistrodziendobry.pl" target="_blank"><p class="menu-top-area-contact-txt contact-mail-icon">kontakt@bistrodziendobry.pl</p></a></div>
                         <div class="menu-top-area-social-fb"><a href="https://www.facebook.com/DzienDobryBistro" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/facebook-icon.svg"></a></div>
                         <div class="menu-top-area-social-ig"><a href="https://www.instagram.com/bistrodziendobryrzeszow/" target="_blank"><img class="menu-top-area-social-icon" src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/instagram-icon.svg"></a></div>
                     </div>
@@ -41,7 +41,7 @@ defined('ABSPATH') || exit;
                 <div class="main-menu">
                     <div class="col-3">
                         <div class="menu-main-logo">
-                            <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.svg"></a>
+                            <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png"></a>
                         </div>
                     </div>
                     <div style="height: 100%;" class="col-9">
@@ -89,7 +89,7 @@ defined('ABSPATH') || exit;
                  aria-labelledby="main-nav-label">
                 <div class="header__logo">
                     <a href="<?php echo esc_url(get_home_url() . '/'); ?>">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.svg">
+                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
                     </a>
                 </div>
                 <button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse"
