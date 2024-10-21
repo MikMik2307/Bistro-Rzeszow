@@ -35,7 +35,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                             echo '<p class="location-single-name">'.esc_html($location_name).'</p>';
                             echo '<p class="location-single-adress">'.esc_html($location_adress).'</p>';
                             echo '<div class="location-single-button-container">';
-                            echo '<a class="location-single-button" href="'.$location_link.'">Zobacz na mapie</a>';
+                            echo '<a class="location-single-button" href="'.$location_link.'" target="_blank">Zobacz na mapie</a>';
                             echo '</div>';
                         echo '</div>';
                     echo '</div>';

@@ -32,16 +32,16 @@ $container = get_theme_mod('understrap_container_type');
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             <div class="footer-business-info-details">
-                                <p class="footer-business-info-details-txt">Bistro Dzień Dobry</p>
-                                <p class="footer-business-info-details-txt">ul.Kwiatowa 2,</p>
-                                <p class="footer-business-info-details-txt">35-206 Rzeszów</p>
+                                <p class="footer-business-info-details-txt">SPÓŁDZIELNIA SOCJALNA MAGIA SMAKÓW</p>
+                                <p class="footer-business-info-details-txt">ul.Dębowa 3,</p>
+                                <p class="footer-business-info-details-txt">39-432 Trześń</p>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="footer-business-info-details">
-                                <p class="footer-business-info-details-txt no-detect">REGON: 941233967</p>
-                                <p class="footer-business-info-details-txt no-detect">NIP: 247 035 9230</p>
-                                <p class="footer-business-info-details-txt no-detect">KRS: 0000927321</p>
+                                <p class="footer-business-info-details-txt no-detect">REGON: 521578483</p>
+                                <p class="footer-business-info-details-txt no-detect">NIP: 8672254722</p>
+                                <p class="footer-business-info-details-txt no-detect">KRS: 0000962821</p>
                             </div>
                         </div>
                     </div>

@@ -41,7 +41,7 @@ defined('ABSPATH') || exit;
                 <div class="main-menu">
                     <div class="col-3">
                         <div class="menu-main-logo">
-                            <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png"></a>
+                            <a href="/"><img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.svg"></a>
                         </div>
                     </div>
                     <div style="height: 100%;" class="col-9">
@@ -89,7 +89,7 @@ defined('ABSPATH') || exit;
                  aria-labelledby="main-nav-label">
                 <div class="header__logo">
                     <a href="<?php echo esc_url(get_home_url() . '/'); ?>">
-                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.png">
+                        <img src="<?= get_stylesheet_directory_uri() ?>/src/assets/img/logo.svg">
                     </a>
                 </div>
                 <button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse"
